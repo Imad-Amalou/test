@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./config/ScrollToTop";
+
+import Home from "./pages/home/home";
+import Contact from "./pages/Contact/Contact";
+import EspaceTransporteur from "./pages/EspaceTransporteur/EspaceTransporteur";
+import LocauxCommerciaux from "./pages/LocauxCommerciaux/LocauxCommerciaux";
+import EspaceVoyageur from "./pages/EspaceVoyageur/EspaceVoyageur";
+import AgencesSogral from "./pages/AgencesSogral/AgenceSogral";
+import Feedback from "./pages/Feedback/Feedback";
+import APropos from "./pages/APropos/APropos";
+import Services from "./pages/Services/Services";
+import Sitemap from "./pages/SiteMap/SiteMap";
+import MentionsLegales from "./pages/MentionsLegales/MentionsLegales";
+import PolitiqueCookies from "./pages/PolitiqueCookies/PolitiqueCookies";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/EspaceTransporteur" element={<EspaceTransporteur />} />
+        <Route path="/LocauxCommerciaux" element={<LocauxCommerciaux />} />
+        <Route path="/EspaceVoyageur" element={<EspaceVoyageur />} />
+        <Route path="/AgencesSogral" element={<AgencesSogral />} />
+        <Route path="/Feedback" element={<Feedback />} />
+        <Route path="/APropos" element={<APropos />} />
+        <Route path="/Services" element={<Services />} />
+        <Route path="/Sitemap" element={<Sitemap />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/Cookies" element={<PolitiqueCookies />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

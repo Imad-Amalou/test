@@ -1,0 +1,97 @@
+.news-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+ 
+    
+}
+
+.news-title {
+    font-size: 38px; 
+    font-weight: bold;
+    color: #00592D; 
+    margin-bottom: 50px;
+    border-bottom: 4px solid #96e600; 
+    padding-bottom: 5px; 
+    display: inline-block;
+    
+}
+
+.news-carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.news-carousel-track {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.5s ease;
+}
+
+.news-card {
+    flex: 0 0 calc((100% - 50px) / 3); /* 3 cartes desktop */
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 10px;
+}
+
+.news-content h3 {
+    font-size: 18px;
+    color: #00592D;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.news-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #95C11F;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.news-btn:hover {
+    background-color: #7aa017;
+}
+
+.news-date {
+    font-size: 12px;
+    font-weight: 300;
+    color: #999;
+    margin: 6px 0 10px;
+}
+
+/* Tablettes = 2 cartes */
+@media (max-width: 900px) {
+    .news-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+}
+
+/* Téléphones = 1 carte */
+@media (max-width: 600px) {
+    .news-card {
+        flex: 0 0 100%;
+    }
+    .news-carousel-track {
+        gap: 15px;
+    }
+}

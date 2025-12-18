@@ -1,0 +1,154 @@
+/* Header.css - Version corrigée */
+
+/* --- Header principal --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    margin: 10px;
+    flex-wrap: wrap;
+    /* Assure que rien ne dépasse */
+    overflow: hidden;
+}
+
+.left-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.left-buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Bouton actif */
+.left-buttons button.active {
+    background-color: #95C11F;
+    color: white;
+}
+
+.left-buttons button:not(.active) {
+    background-color: white;
+    color: black;
+}
+
+/* Barre de recherche et contrôles à droite */
+.right-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.search-container2 {
+    position: relative;
+    flex: 1;
+    min-width: 150px;
+}
+
+.search-container2 input {
+    width: 100%;
+    padding: 7px 35px 7px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-container2 .search-icon2 {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
+}
+
+/* Menu langue - CORRECTION ICI */
+.language-select {
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.language-select .selected {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    gap: 5px;
+    white-space: nowrap; /* Évite le retour à ligne */
+}
+
+.language-select .options {
+    position: fixed; /* Au lieu de absolute */
+    top: auto;
+    bottom: auto;
+    right: 20px; /* Position fixe par rapport à l'écran */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    width: auto;
+    min-width: 100px;
+}
+
+
+
+.language-select .option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap; /* Évite le retour à ligne */
+}
+
+.language-select .option:hover {
+    background-color: #f0f0f0;
+}
+
+.language-select img {
+    width: 20px;
+    height: 14px;
+    flex-shrink: 0; /* Empêche la réduction */
+}
+
+/* Ajoutez ces styles pour le responsive */
+@media (max-width: 768px) {
+    .right-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .language-select .options {
+        right: auto;
+        left: 0;
+    }
+}
+
+/* S'assurer que le body n'a pas de scroll horizontal */
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+* {
+    box-sizing: border-box;
+}

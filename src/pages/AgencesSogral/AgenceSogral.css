@@ -1,0 +1,1192 @@
+/* Variables de la charte SOGRAL */
+:root {
+  --primary-green: #00592D;
+  --secondary-green: #95C11F;
+  --light-green: #6FA11F;
+  --dark-green: #002809;
+  --gray-bg: #f8f9fa;
+  --white: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --border-color: #e0e0e0;
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --danger: #e74c3c;
+}
+
+/* Reset et base */
+.agences-page {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-dark);
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.agences-hero {
+  background: linear-gradient(rgba(0, 89, 45, 0.3), rgba(149, 193, 31, 0.3)),
+              url('../../Assets/agences.jpg') center/cover;
+  padding: 80px 0;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--secondary-green);
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Titres de section */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-green);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 50px;
+}
+
+/* Section Contrôles */
+.controls-section {
+  background: var(--white);
+  padding: 30px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.search-input {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+}
+
+.search-input input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s;
+}
+
+.search-input input:focus {
+  outline: none;
+  border-color: var(--secondary-green);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+}
+
+.view-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-btn.active {
+  background: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+}
+
+.toggle-btn:hover:not(.active) {
+  border-color: var(--secondary-green);
+  color: var(--primary-green);
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+}
+
+.regions-filter h3 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.region-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: var(--gray-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.region-btn:hover {
+  border-color: var(--secondary-green);
+  transform: translateY(-2px);
+}
+
+.region-btn.active {
+  background: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+}
+
+.region-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.region-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.region-btn.active .region-count {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Section Contenu */
+.content-section {
+  padding: 40px 0;
+}
+
+/* Vue Carte */
+.carte-view {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.carte-header {
+  padding: 25px 30px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.carte-header h2 {
+  color: var(--primary-green);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.carte-header p {
+  color: var(--text-light);
+}
+
+.carte-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 992px) {
+  .carte-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carte-placeholder {
+  height: 500px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carte-overlay {
+  text-align: center;
+  color: var(--white);
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.carte-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.carte-overlay p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.carte-action-btn {
+  background: var(--secondary-green);
+  color: var(--white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carte-action-btn:hover {
+  background: var(--light-green);
+}
+
+.carte-legende {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.legende-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.legende-marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.legende-marker.ouvert {
+  background: var(--success);
+}
+
+.legende-marker.ferme {
+  background: var(--danger);
+}
+
+.carte-sidebar {
+  padding: 25px;
+  background: var(--gray-bg);
+  border-left: 2px solid var(--border-color);
+}
+
+.carte-sidebar h3 {
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.agences-list-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mini-agence-card {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s;
+}
+
+.mini-agence-card:hover {
+  border-color: var(--secondary-green);
+}
+
+.mini-agence-card h4 {
+  color: var(--primary-green);
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.mini-agence-card p {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.voir-btn {
+  background: var(--secondary-green);
+  color: var(--white);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.voir-btn:hover {
+  background: var(--light-green);
+}
+
+/* Vue Liste */
+.liste-view {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.liste-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.liste-header h2 {
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.tri-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.tri-options select {
+  padding: 8px 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tri-options select:focus {
+  outline: none;
+  border-color: var(--secondary-green);
+}
+
+.agences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .agences-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.agence-card {
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.agence-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-color: var(--secondary-green);
+}
+
+.agence-image {
+  position: relative;
+  height: 200px;
+}
+
+.agence-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.agence-status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.agence-status.ouverte {
+  background: var(--success);
+}
+
+.agence-status.fermee {
+  background: var(--danger);
+}
+
+.agence-content {
+  padding: 20px;
+}
+
+.agence-content h3 {
+  color: var(--primary-green);
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.agence-ville {
+  color: var(--secondary-green);
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.agence-address {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.agence-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  color: var(--secondary-green);
+  font-size: 1.1rem;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.agence-services {
+  margin-bottom: 20px;
+}
+
+.services-label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-tag {
+  background: #e8f5e9;
+  color: var(--primary-green);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.agence-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.details-btn,
+.itineraire-btn {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid;
+}
+
+.details-btn {
+  background: var(--secondary-green);
+  color: var(--white);
+  border-color: var(--secondary-green);
+}
+
+.details-btn:hover {
+  background: var(--light-green);
+  border-color: var(--light-green);
+}
+
+.itineraire-btn {
+  background: transparent;
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.itineraire-btn:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.no-results h3 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+}
+
+.no-results p {
+  color: var(--text-light);
+}
+
+/* Section Services */
+.services-section {
+  padding: 80px 0;
+  background: var(--gray-bg);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #f0f0f0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(149, 193, 31, 0.15);
+  border-color: var(--secondary-green);
+}
+
+.service-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+.service-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Section Horaires */
+.horaires-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.horaires-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .horaires-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.horaires-text h2 {
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.horaires-text p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.horaires-table {
+  background: var(--gray-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 2px solid var(--border-color);
+}
+
+.horaire-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.horaire-row:last-child {
+  border-bottom: none;
+}
+
+.horaire-row.highlight {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+.jour {
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+.horaire-row.highlight .jour {
+  color: var(--white);
+}
+
+.heures {
+  font-weight: 600;
+  color: var(--secondary-green);
+}
+
+.horaire-row.highlight .heures {
+  color: var(--white);
+}
+
+.urgence-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffeaea;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid var(--danger);
+}
+
+.urgence-icon {
+  font-size: 40px;
+}
+
+.urgence-info h4 {
+  color: #c0392b;
+  margin-bottom: 5px;
+}
+
+.urgence-phone {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.horaires-image .image-placeholder {
+  height: 400px;
+  background: linear-gradient(135deg, #00592D 0%, #95C11F 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-overlay {
+  text-align: center;
+  color: var(--white);
+  padding: 30px;
+}
+
+.image-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.image-overlay p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.visio-btn {
+  background: var(--white);
+  color: var(--primary-green);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.visio-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Section Contact */
+.contact-section {
+  padding: 80px 0;
+  background: var(--gray-bg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  border: 2px solid #f0f0f0;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary-green);
+}
+
+.contact-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: var(--secondary-green);
+}
+
+.contact-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.contact-detail {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.contact-sub {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-light);
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.modal-close:hover {
+  background: var(--gray-bg);
+}
+
+.modal-header {
+  padding: 30px 30px 20px;
+  border-bottom: 2px solid var(--gray-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  margin: 0;
+  flex: 1;
+}
+
+.modal-status {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal-status.ouverte { background: var(--success); }
+.modal-status.fermee { background: var(--danger); }
+
+.modal-body {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.detail-section {
+  margin-bottom: 25px;
+}
+
+.detail-section h4 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #eee;
+}
+
+.contact-line:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.value {
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.horaires-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.horaire-line {
+  padding: 8px 12px;
+  background: var(--gray-bg);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.services-grid-modal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.service-item-modal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #e8f5e9;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.service-icon {
+  color: var(--secondary-green);
+  font-weight: bold;
+}
+
+.description {
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.modal-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+  .modal-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal-btn {
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid;
+  font-size: 0.9rem;
+}
+
+.modal-btn.itineraire {
+  background: var(--secondary-green);
+  color: var(--white);
+  border-color: var(--secondary-green);
+}
+
+.modal-btn.itineraire:hover {
+  background: var(--light-green);
+  border-color: var(--light-green);
+}
+
+.modal-btn.appeler {
+  background: var(--white);
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.modal-btn.appeler:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+.modal-btn.email {
+  background: #3498db;
+  color: var(--white);
+  border-color: #3498db;
+}
+
+.modal-btn.email:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .agences-hero {
+    padding: 60px 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-stats {
+    gap: 30px;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .regions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .liste-view {
+    padding: 20px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.agence-card,
+.service-card,
+.contact-card {
+  animation: fadeIn 0.6s ease-out;
+}

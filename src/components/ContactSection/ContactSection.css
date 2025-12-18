@@ -1,0 +1,96 @@
+.contact-section2 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* LEFT BOX */
+.left-box {
+    background: #f2f2f2;
+    border-radius: 25px;
+    padding: 40px 0;
+    width: 65%;
+    min-height: 330px;
+    position: relative;
+    z-index: 1;
+}
+
+.left-box h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0 40px;
+    color: #111;
+}
+
+.left-box img {
+    width: 250px;
+    margin-top: 30px;
+    padding-left: 40px;
+}
+
+/* RIGHT BOX (CHEVAUCHEMENT) */
+.right-box {
+    background: #002809;
+    color: white;
+    border-radius: 25px;
+    padding: 30px;
+    width: 45%;
+    min-height: 300px;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    text-align: center;
+}
+
+.right-box h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.right-box p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.right-box button {
+    padding: 14px 30px;
+    background: white;
+    color: #00592D;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.right-box button:hover {
+    background-color: #95C11F;
+    color: #002809;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-section2 {
+        flex-direction: column;
+    }
+
+    .left-box,
+    .right-box {
+        position: static;
+        width: 100%;
+        transform: none;
+    }
+
+    .right-box {
+        margin-top: -20px;
+    }
+}

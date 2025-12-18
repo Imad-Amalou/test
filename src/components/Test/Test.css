@@ -1,0 +1,338 @@
+/* Variables de la charte SOGRAL */
+:root {
+  --primary-green: #00592D;
+  --secondary-green: #95C11F;
+  --light-green: #6FA11F;
+  --dark-green: #002809;
+  --gray-bg: #f8f9fa;
+  --white: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --border-color: #e0e0e0;
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --danger: #e74c3c;
+}
+
+/* Section principale */
+.section-agences {
+  padding: 100px 20px;
+  background: var(--gray-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* En-tête de section */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-green);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 25px auto 0;
+  line-height: 1.6;
+}
+
+/* Grille des agences */
+.agences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Carte d'agence */
+.agence-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.agence-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 89, 45, 0.1);
+  border-color: var(--light-green);
+}
+
+/* Image de l'agence */
+.agence-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.agence-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.agence-card:hover .agence-image img {
+  transform: scale(1.05);
+}
+
+.agence-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--primary-green);
+  color: var(--white);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Contenu de la carte */
+.agence-content {
+  padding: 25px;
+}
+
+/* Ville */
+.agence-ville {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.location-icon {
+  color: var(--primary-green);
+}
+
+.agence-ville h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin: 0;
+}
+
+/* Informations de l'agence */
+.agence-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.agence-info svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.agence-info a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.agence-info a:hover {
+  color: var(--primary-green);
+  text-decoration: underline;
+}
+
+/* Services */
+.agence-services {
+  margin: 25px 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.agence-services h4 {
+  font-size: 1rem;
+  color: var(--dark-green);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.services-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-tag {
+  background: rgba(149, 193, 31, 0.1);
+  color: var(--secondary-green);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(149, 193, 31, 0.3);
+}
+
+/* Actions */
+.agence-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-btn,
+.map-btn {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.contact-btn {
+  background: var(--primary-green);
+  color: var(--white);
+  border: 2px solid var(--primary-green);
+}
+
+.contact-btn:hover {
+  background: var(--dark-green);
+  border-color: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+.map-btn {
+  background: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.map-btn:hover {
+  background: var(--primary-green);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Bouton toutes les agences */
+.all-agences-cta {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 2px solid var(--border-color);
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--secondary-green);
+  color: var(--dark-green);
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--secondary-green);
+  margin-bottom: 15px;
+}
+
+.view-all-btn:hover {
+  background: var(--light-green);
+  border-color: var(--light-green);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(149, 193, 31, 0.2);
+}
+
+.view-all-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover svg {
+  transform: translateX(5px);
+}
+
+.agences-count {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-agences {
+    padding: 60px 20px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .agences-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .agence-actions {
+    flex-direction: column;
+  }
+  
+  .view-all-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .agence-content {
+    padding: 20px;
+  }
+  
+  .agence-ville h3 {
+    font-size: 1.3rem;
+  }
+  
+  .services-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .service-tag {
+    width: 100%;
+    text-align: center;
+  }
+}

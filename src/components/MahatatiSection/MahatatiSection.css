@@ -1,0 +1,126 @@
+/* ========================= */
+/* SECTION MAHATATI          */
+/* ========================= */
+
+.background-section {
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 100px;
+    background-image: url("../../../public/Images/courbe.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OVERLAY */
+.content-overlay {
+    width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+/* FLEX */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* TEXTE */
+.hero-text {
+    flex: 1 1 45%;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.hero-text button {
+    margin-top: 10px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #95C11F;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-text button:hover {
+    background-color: #7aa017;
+    transform: scale(1.05);
+}
+
+/* IMAGE */
+.hero-image {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* RESPONSIVE TABLETTE       */
+/* ========================= */
+@media (max-width: 1024px) {
+    .content-overlay {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE MOBILE         */
+/* ========================= */
+@media (max-width: 768px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text,
+    .hero-image {
+        flex: 1 1 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-text button {
+        width: 100%;
+    }
+}

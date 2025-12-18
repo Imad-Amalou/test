@@ -1,0 +1,118 @@
+/* ========================= */
+/* SECTION TRAVAUX           */
+/* ========================= */
+
+.travaux-section {
+    background: linear-gradient(to bottom, #00592D, #6FA11F);
+    border-radius: 20px;
+    padding: 40px 60px;
+    width: 65%;
+    margin: 160px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.travaux-section * {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.travaux-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Image */
+.travaux-left img {
+    width: 180px;
+}
+
+/* Texte */
+.travaux-right h2 {
+    font-size: 1.4em;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: #95C11F;
+}
+
+.travaux-right p {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #FFF;
+}
+
+/* Bouton */
+.travaux-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #95C11F;
+    border-radius: 12px;
+    color: #000;
+    font-size: 1.05em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.travaux-btn:hover {
+    background-color: #FFF;
+    transform: scale(1.08);
+    color: #00592D;
+}
+
+/* ========================= */
+/* TABLET                    */
+/* ========================= */
+@media (max-width: 1024px) {
+    .travaux-section {
+        width: 85%;
+        padding: 35px;
+    }
+
+    .travaux-content {
+        gap: 35px;
+    }
+}
+
+/* ========================= */
+/* MOBILE                    */
+/* ========================= */
+@media (max-width: 768px) {
+    .travaux-section {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 100px auto;
+    }
+
+    .travaux-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .travaux-left img {
+        width: 140px;
+    }
+
+    .travaux-right h2 {
+        font-size: 1.2em;
+    }
+
+    .travaux-right p {
+        font-size: 0.95em;
+    }
+}
+
+/* ========================= */
+/* PETITS TÉLÉPHONES         */
+/* ========================= */
+@media (max-width: 480px) {
+    .travaux-left img {
+        width: 120px;
+    }
+
+    .travaux-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

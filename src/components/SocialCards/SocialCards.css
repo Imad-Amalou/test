@@ -1,0 +1,76 @@
+.section-title2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 60px 0 30px 0;
+    font-weight: bold;
+    color: #00592D;
+}
+
+.section-title2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #95C11F;
+    margin: 10px auto 0;
+    display: block;
+    border-radius: 4px;
+}
+
+.social-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+    gap: 25px;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+.card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border: 1px solid #95C11F;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Responsive tablette et mobile */
+@media (max-width: 768px) {
+    .social-cards {
+        grid-template-columns: 1fr; /* 1 carte par ligne */
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card img {
+        margin-bottom: 10px;
+    }
+}

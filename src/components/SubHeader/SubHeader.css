@@ -1,0 +1,146 @@
+/* Global */
+.sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+/* Hamburger mobile */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu principal */
+nav {
+    margin-left: auto;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu > li {
+    position: relative;
+}
+
+.main-menu > li > a {
+    text-decoration: none;
+    color: #00592D;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+/* Sous-menu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: #fff;
+    border-radius: 10px;
+    min-width: 260px;
+    padding: 10px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Affichage au hover */
+.main-menu > li:hover > .sub-menu {
+    display: block;
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #00592D;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: normal;
+}
+
+.sub-menu li a:hover {
+    background: #f2f2f2;
+    color: #95C11F;
+}
+
+.main-menu > li > a:hover {
+    color: #95C11F;
+}
+
+/* ====================== MOBILE ====================== */
+@media (max-width: 900px) {
+
+    .sub-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .main-menu > li {
+        width: 100%;
+    }
+
+    .sub-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        padding-left: 15px;
+        min-width: 100%;
+    }
+}
+/* Lien actif */
+.main-menu > li > a.active {
+    border-bottom: 3px solid #95C11F; /* vert clair */
+    padding-bottom: 5px; /* pour ne pas changer la hauteur */
+}
+
+/* Animation optionnelle */
+.main-menu > li > a {
+    transition: border-bottom 0.3s;
+}

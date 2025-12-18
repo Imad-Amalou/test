@@ -1,0 +1,168 @@
+/* ========================= */
+/* SECTION ASD               */
+/* ========================= */
+
+.ASD {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 5%;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+/* TEXTE */
+.text {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00592D;
+}
+
+.text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* CONTENEUR CARTES */
+.care {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* COLONNE 2 CARTES */
+.deuxcare {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 260px;
+}
+
+/* COLONNE 1 CARTE */
+.uncare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+}
+
+/* CARTE */
+.careuni {
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.careuni:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.careuni h3 {
+    margin: 5px 0;
+    color: #00592D;
+}
+
+/* LIENS */
+.careuni a {
+    margin-top: 5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #00592D;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.careuni a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #6FA11F;
+    transition: width 0.35s ease;
+}
+
+.careuni a:hover {
+    color: #6FA11F;
+}
+
+.careuni a:hover::after {
+    width: 100%;
+}
+
+/* ========================= */
+/* TABLETTE                  */
+/* ========================= */
+@media (max-width: 900px) {
+    .care {
+        gap: 15px;
+    }
+
+    .deuxcare,
+    .uncare {
+        max-width: 45%;
+    }
+}
+
+/* ========================= */
+/* MOBILE                    */
+/* ========================= */
+@media (max-width: 600px) {
+    .ASD {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .care {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .deuxcare,
+    .uncare {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .careuni {
+        width: 85%;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+}
