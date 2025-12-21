@@ -28,6 +28,17 @@ header {
     border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
+.particulier:hover{
+    box-shadow: #555;
+}
+.left-buttons button {
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.left-buttons button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
 
 /* Bouton actif */
 .left-buttons button.active {

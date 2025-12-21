@@ -1,14 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./Header.css"; // CSS séparé pour le style
+import "./Header.css"; 
 import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
-  const [activeBtn, setActiveBtn] = useState("particulier");
+  const [activeBtn] = useState("particulier");
   const [lang, setLang] = useState("fr");
   const [openLang, setOpenLang] = useState(false);
   const languageRef = useRef(null);
 
-  // Fermer le menu langue quand on clique en dehors
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (languageRef.current && !languageRef.current.contains(event.target)) {
@@ -19,9 +18,6 @@ const Header = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  const handleBtnClick = (btn) => {
-    setActiveBtn(btn);
-  };
 
   const handleLangClick = (value) => {
     setLang(value);
@@ -31,20 +27,13 @@ const Header = () => {
   return (
     <header>
       <div className="left-buttons">
-        <button
+       {/*<button
           id="particulier"
           className={activeBtn === "particulier" ? "active" : ""}
-          onClick={() => handleBtnClick("particulier")}
+          
         >
-          Particulier
-        </button>
-        <button
-          id="professionnel"
-          className={activeBtn === "professionnel" ? "active" : ""}
-          onClick={() => handleBtnClick("professionnel")}
-        >
-          Professionnel
-        </button>
+          Connexion
+        </button>*/}
       </div>
 
       <div className="right-controls">
