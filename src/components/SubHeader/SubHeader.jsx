@@ -14,7 +14,7 @@ const SubHeader = () => {
   return (
     <div className="sub-header">
       <div className="logo">
-        <img src="../../Assets/logo.pnggit add ." alt="Logo" />
+        <img src="/images/logo.png" alt="Logo" />
       </div>
 
       <button

@@ -1,12 +1,14 @@
 import "./HeroSection.css";
+import bus from "../../Assets/bus.jpg"
+import logo from "../../Assets/logo1.png"
 
 const HeroSection = () => {
   return (
     <section className="hero-section">
-      <img src="images/bus1.jpg" alt="Image d'accueil" className="hero-bg" />
+      <img src={bus} alt="Image d'accueil" className="hero-bg" />
 
       <div className="hero-card">
-        <img src="/images/logo1.png" alt="Logo" />
+        <img src={logo} alt="Logo" />
 
         <h2>Recherchez votre itinéraire</h2>
         <p>
