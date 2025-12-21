@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const SubHeader = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [activeLink, setActiveLink] = useState("/"); // lien actif par défaut
+  const [activeLink, setActiveLink] = useState("/"); 
   const location = useLocation();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const SubHeader = () => {
   return (
     <div className="sub-header">
       <div className="logo">
-        <img src="/images/logo.png" alt="Logo" />
+        <img src="../../Assets/logo.pnggit add ." alt="Logo" />
       </div>
 
       <button
