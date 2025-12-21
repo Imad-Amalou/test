@@ -1,6 +1,7 @@
 import "./SubHeader.css";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import logo from "../../Assets/logo.png";
 
 const SubHeader = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -14,7 +15,7 @@ const SubHeader = () => {
   return (
     <div className="sub-header">
       <div className="logo">
-        <img src="/images/logo.png" alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
 
       <button

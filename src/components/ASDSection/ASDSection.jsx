@@ -1,10 +1,15 @@
 import "./ASDSection.css";
 import { Link } from "react-router-dom";
+import avis from "../../Assets/01.png";
+import dol from "../../Assets/02.png";
+import sondage from "../../Assets/03.png";
+
+
+
 
 const ASDSection = () => {
   return (
     <section className="ASD">
-      {/* TEXTE */}
       <div className="text">
         <h2>Partagez, participez, signalez — votre voix compte</h2>
         <p>
@@ -15,13 +20,11 @@ const ASDSection = () => {
         </p>
       </div>
 
-      {/* CARTES */}
       <div className="care">
-        {/* Colonne 2 cartes */}
         <div className="deuxcare">
           <div className="careuni" role="article">
             <img
-              src="/images/01.png"
+              src={avis}
               alt="Icône Avis"
               width="50"
             />
@@ -33,7 +36,7 @@ const ASDSection = () => {
 
           <div className="careuni" role="article">
             <img
-              src="/images/02.png"
+              src={dol}
               alt="Icône Sondages"
               width="50"
             />
@@ -44,11 +47,11 @@ const ASDSection = () => {
           </div>
         </div>
 
-        {/* Colonne 1 carte */}
+       
         <div className="uncare">
           <div className="careuni" role="article">
             <img
-              src="/images/03.png"
+              src={sondage}
               alt="Icône Doléances"
               width="50"
             />

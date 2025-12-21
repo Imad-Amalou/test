@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./TraveauxSection.css";
+import logo from "../../Assets/logo1.png"
 
 const TravauxSection = () => {
   return (
@@ -7,7 +8,7 @@ const TravauxSection = () => {
       <div className="travaux-content">
         <div className="travaux-left">
           <img
-            src="/images/logo1.png"
+            src={logo}
             alt="Travaux SOGRALE"
             className="travaux-icon"
           />
