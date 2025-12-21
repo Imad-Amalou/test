@@ -9,7 +9,6 @@ import SocialCards from "../../components/SocialCards/SocialCards";
 import AgencesSection from "../../components/AgencesSection/AgencesSEction";
 import Footer from "../../components/Footer/Footer";
 import NewsCarousel from "../../components/NewsCarousel/NewsCarousel";
-import Test from "../../components/Test/Test";
 export default function Home() {
   return (
     <div className="app-container">
@@ -25,7 +24,6 @@ export default function Home() {
         <SocialCards />
         <AgencesSection />
         <NewsCarousel />
-        <Test />
       </div>
 
       <Footer />

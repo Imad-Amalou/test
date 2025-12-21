@@ -123,7 +123,7 @@ const contactMethods = [
 
         <section className="contact-methods-section">
           <div className="container">
-            <h2 className="section-title">Nos canaux de communication</h2>
+            <h2 className="section-title3">Nos canaux de communication</h2>
             <p className="section-subtitle">Choisissez le moyen qui vous convient le mieux</p>
             <div className="methods-grid">
               {contactMethods.map((method, index) => (
@@ -154,7 +154,6 @@ const contactMethods = [
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="contact-form">
-                    {/* Formulaire simplifié pour lisibilité */}
                     <div className="form-row">
                       <div className="form-group">
                         <label htmlFor="nom">Nom *</label>
@@ -231,7 +230,7 @@ const contactMethods = [
         {/* Carte Google Maps */}
         <section className="agencies-map-section">
           <div className="container">
-            <h2 className="section-title">Trouvez une agence près de chez vous</h2>
+            <h2 className="section-title3">Trouvez une agence près de chez vous</h2>
             <div className="map-container">
               <div className="map-placeholder">
              <iframe
