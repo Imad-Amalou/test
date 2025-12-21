@@ -10,10 +10,17 @@
     font-weight: bold;
     color: #00592D; 
     margin-bottom: 50px;
-    border-bottom: 4px solid #96e600; 
-    padding-bottom: 5px; 
-    display: inline-block;
-    
+    text-align: center;
+    padding-bottom: 5px;     
+}
+.news-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #95C11F;
+    margin: 10px auto 0;
+    display: block;
+    border-radius: 4px;
 }
 
 .news-carousel {

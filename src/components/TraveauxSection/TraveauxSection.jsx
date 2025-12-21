@@ -1,35 +1,31 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./TraveauxSection.css";
-import logo from "../../Assets/logo1.png"
+import logo from "../../Assets/logo1.png";
 
 const TravauxSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="travaux-section">
       <div className="travaux-content">
         <div className="travaux-left">
           <img
             src={logo}
-            alt="Travaux SOGRALE"
+            alt="SOGRALE"
             className="travaux-icon"
           />
         </div>
 
         <div className="travaux-right">
-          <h2>Présentation de SOGRALE</h2>
+          <h2>{t("travaux.title")}</h2>
 
-          <p>
-            La SOGRALE (Société de Gestion et de Réalisation des Lignes de
-            Transport) est une entreprise algérienne spécialisée dans la gestion,
-            l’exploitation et le développement des réseaux de transport urbain et
-            interurbain.
-            <br />
-            <br />
-            Grâce à une équipe qualifiée et à des solutions modernes,
-            l’entreprise œuvre à faciliter les déplacements, optimiser les
-            itinéraires et garantir une expérience de transport accessible à
-            tous.
+          <p style={{ whiteSpace: "pre-line" }}>
+            {t("travaux.description")}
           </p>
-          <Link to="/APropos" className="travaux-btn"> Voir plus
+
+          <Link to="/APropos" className="travaux-btn">
+            {t("travaux.more")}
           </Link>
         </div>
       </div>

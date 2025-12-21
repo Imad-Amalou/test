@@ -1,10 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./Header.css"; 
-import { FaSearch } from "react-icons/fa";
+import "./Header.css";
+import { FaSearch, FaFlag, FaFlagUsa } from "react-icons/fa";
+import { MdLanguage } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
-  const [activeBtn] = useState("particulier");
-  const [lang, setLang] = useState("fr");
+  const { t, i18n } = useTranslation();
+
+  const [lang, setLang] = useState(i18n.language || "fr");
   const [openLang, setOpenLang] = useState(false);
   const languageRef = useRef(null);
 
@@ -18,55 +21,60 @@ const Header = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-
+  // 🔹 changement de langue GLOBAL
   const handleLangClick = (value) => {
     setLang(value);
     setOpenLang(false);
+
+    i18n.changeLanguage(value);
+
+    document.documentElement.lang = value;
+    document.documentElement.dir = value === "ar" ? "rtl" : "ltr";
+  };
+
+  const renderSelectedIcon = () => {
+    if (lang === "fr") return <FaFlag />;
+    if (lang === "ar") return <MdLanguage />;
+    return <FaFlagUsa />;
   };
 
   return (
     <header>
       <div className="left-buttons">
-       {/*<button
-          id="particulier"
-          className={activeBtn === "particulier" ? "active" : ""}
-          
-        >
-          Connexion
-        </button>*/}
+        {/* Boutons futurs */}
       </div>
 
       <div className="right-controls">
         <div className="search-container2">
-          <input type="text" placeholder="Rechercher..." />
-          <span className="search-icon2"><FaSearch /></span>
+          <input
+            type="text"
+            placeholder={t("search")}
+          />
+          <span className="search-icon2">
+            <FaSearch />
+          </span>
         </div>
 
         <div className="language-select" ref={languageRef}>
-          <div className="selected" onClick={() => setOpenLang(!openLang)}>
-            <img
-              src={
-                lang === "fr"
-                  ? "https://flagcdn.com/w20/fr.png"
-                  : lang === "ar"
-                  ? "https://flagcdn.com/w20/dz.png"
-                  : "https://flagcdn.com/w20/gb.png"
-              }
-              alt={lang.toUpperCase()}
-            />
+          <div
+            className="selected"
+            onClick={() => setOpenLang(!openLang)}
+            role="button"
+          >
+            {renderSelectedIcon()}
             <span>{lang.toUpperCase()}</span>
           </div>
 
           {openLang && (
             <div className="options">
               <div className="option" onClick={() => handleLangClick("fr")}>
-                <img src="https://flagcdn.com/w20/fr.png" alt="FR" /> FR
+                <FaFlag /> FR
               </div>
               <div className="option" onClick={() => handleLangClick("ar")}>
-                <img src="https://flagcdn.com/w20/dz.png" alt="AR" /> AR
+                <MdLanguage /> AR
               </div>
               <div className="option" onClick={() => handleLangClick("en")}>
-                <img src="https://flagcdn.com/w20/gb.png" alt="EN" /> EN
+                <FaFlagUsa /> EN
               </div>
             </div>
           )}

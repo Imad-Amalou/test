@@ -1,9 +1,11 @@
 import "./SubHeader.css";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import logo from "../../Assets/logo.png";
 
 const SubHeader = () => {
+  const { t, i18n } = useTranslation(); // ✅ i18n
   const [openMenu, setOpenMenu] = useState(false);
   const [activeLink, setActiveLink] = useState("/"); 
   const location = useLocation();
@@ -33,7 +35,7 @@ const SubHeader = () => {
               className={activeLink === "/" ? "active" : ""}
               onClick={() => setOpenMenu(false)}
             >
-              Accueil
+              {t("menu.home")}
             </Link>
           </li>
           <li>
@@ -42,12 +44,12 @@ const SubHeader = () => {
               className={activeLink === "/AgencesSogral" ? "active" : ""}
               onClick={() => setOpenMenu(false)}
             >
-              Agences SOGRAL
+              {t("menu.agences")}
             </Link>
             <ul className="sub-menu">
-              <li><a href="#">Affichage des agences sur Google Maps</a></li>
-              <li><a href="#">Photos</a></li>
-              <li><a href="#">Vidéos</a></li>
+              <li>{t("menu.agences.map")}</li>
+              <li>{t("menu.agences.photos")}</li>
+              <li>{t("menu.agences.videos")}</li>
             </ul>
           </li>
 
@@ -57,11 +59,11 @@ const SubHeader = () => {
               className={activeLink === "/LocauxCommerciaux" ? "active" : ""}
               onClick={() => setOpenMenu(false)}
             >
-              Locaux commerciaux
+              {t("menu.locaux")}
             </Link>
             <ul className="sub-menu">
-              <li><a href="#">Consultation par agences</a></li>
-              <li><a href="#">Demande de location (gré à gré)</a></li>
+              <li>{t("menu.locaux.consultation")}</li>
+              <li>{t("menu.locaux.demande")}</li>
             </ul>
           </li>
 
@@ -71,7 +73,7 @@ const SubHeader = () => {
               className={activeLink === "/EspaceVoyageur" ? "active" : ""}
               onClick={() => setOpenMenu(false)}
             >
-              Espace Voyageur
+              {t("menu.voyageur")}
             </Link>
           </li>
 
@@ -81,7 +83,7 @@ const SubHeader = () => {
               className={activeLink === "/EspaceTransporteur" ? "active" : ""}
               onClick={() => setOpenMenu(false)}
             >
-              Espace Transporteur
+              {t("menu.transporteur")}
             </Link>
           </li>
 
@@ -91,7 +93,7 @@ const SubHeader = () => {
               className={activeLink === "/contact" ? "active" : ""}
               onClick={() => setOpenMenu(false)}
             >
-              Aide & Contact
+              {t("menu.contact")}
             </Link>
           </li>
         </ul>

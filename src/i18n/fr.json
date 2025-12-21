@@ -1,0 +1,31 @@
+{
+  "travaux": {
+    "title": "Présentation de SOGRALE",
+    "description": "La SOGRALE (Société de Gestion et de Réalisation des Lignes de Transport) est une entreprise algérienne spécialisée dans la gestion, l’exploitation et le développement des réseaux de transport urbain et interurbain.\n\nGrâce à une équipe qualifiée et à des solutions modernes, l’entreprise œuvre à faciliter les déplacements, optimiser les itinéraires et garantir une expérience de transport accessible à tous.",
+    "more": "Voir plus"
+  },
+  "menu": {
+    "home": "Accueil",
+    "agences": "Agences SOGRAL",
+    "agences.map": "Affichage des agences sur Google Maps",
+    "agences.photos": "Photos",
+    "agences.videos": "Vidéos",
+    "locaux": "Locaux commerciaux",
+    "locaux.consultation": "Consultation par agences",
+    "locaux.demande": "Demande de location (gré à gré)",
+    "voyageur": "Espace Voyageur",
+    "transporteur": "Espace Transporteur",
+    "contact": "Aide & Contact"
+  },"hero": {
+    "alt": "Image d'accueil",
+    "title": "Recherchez votre itinéraire",
+    "description": "Entrez votre point de départ et votre destination pour trouver le meilleur itinéraire :",
+    "start": "Point de départ",
+    "end": "Destination",
+    "transport": "Moyen de transport",
+    "bus": "Bus",
+    "train": "Train",
+    "taxi": "Taxi",
+    "search": "Chercher"
+  }
+}

@@ -1,32 +1,32 @@
 import "./HeroSection.css";
-import bus from "../../Assets/bus.jpg"
-import logo from "../../Assets/logo1.png"
+import bus from "../../Assets/bus.jpg";
+import logo from "../../Assets/logo1.png";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="hero-section">
-      <img src={bus} alt="Image d'accueil" className="hero-bg" />
+      <img src={bus} alt={t("hero.alt")} className="hero-bg" />
 
       <div className="hero-card">
         <img src={logo} alt="Logo" />
 
-        <h2>Recherchez votre itinéraire</h2>
-        <p>
-          Entrez votre point de départ et votre destination pour trouver le
-          meilleur itinéraire :
-        </p>
+        <h2>{t("hero.title")}</h2>
+        <p>{t("hero.description")}</p>
 
-        <input type="text" placeholder="Point de départ" />
-        <input type="text" placeholder="Destination" />
+        <input type="text" placeholder={t("hero.start")} />
+        <input type="text" placeholder={t("hero.end")} />
 
         <select>
-          <option>Moyen de transport</option>
-          <option>Bus</option>
-          <option>Train</option>
-          <option>Taxi</option>
+          <option>{t("hero.transport")}</option>
+          <option>{t("hero.bus")}</option>
+          <option>{t("hero.train")}</option>
+          <option>{t("hero.taxi")}</option>
         </select>
 
-        <button className="submit-btn">Chercher</button>
+        <button className="submit-btn">{t("hero.search")}</button>
       </div>
     </section>
   );

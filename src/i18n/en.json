@@ -1,0 +1,34 @@
+{
+  "travaux": {
+    "title": "SOGRALE Presentation",
+    "description": "SOGRALE (Company for the Management and Development of Transport Lines) is an Algerian company specialized in the management, operation and development of urban and intercity transport networks.\n\nThanks to a qualified team and modern solutions, the company works to facilitate mobility, optimize routes and ensure accessible transport for everyone.",
+    "more": "See more"
+  },
+   "menu": {
+    "home": "Home",
+    "agences": "SOGRAL Agencies",
+    "agences.map": "Show agencies on Google Maps",
+    "agences.photos": "Photos",
+    "agences.videos": "Videos",
+    "locaux": "Commercial Spaces",
+    "locaux.consultation": "Consultation by agencies",
+    "locaux.demande": "Rental request (direct)",
+    "voyageur": "Traveler Space",
+    "transporteur": "Transporter Space",
+    "contact": "Help & Contact"
+  },
+  "hero": {
+    "alt": "Home image",
+    "title": "Search your route",
+    "description": "Enter your start point and destination to find the best route:",
+    "start": "Start point",
+    "end": "Destination",
+    "transport": "Transport type",
+    "bus": "Bus",
+    "train": "Train",
+    "taxi": "Taxi",
+    "search": "Search"
+  }
+
+
+}
