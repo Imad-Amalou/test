@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Footer.css";
-
+import logo from "../../Assets/logo.png";
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -62,7 +62,7 @@ const Footer = () => {
 
       {/* Troisième étage : logo */}
       <div className="footer-bottom">
-        <img src="images/logo.png" alt="Sogral Logo" />
+        <img src={logo} alt="Sogral Logo" />
         <p>{t("footer.copyright")}</p>
       </div>
 
