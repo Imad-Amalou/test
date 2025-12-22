@@ -16,7 +16,8 @@
     "voyageur": "Espace Voyageur",
     "transporteur": "Espace Transporteur",
     "contact": "Aide & Contact"
-  },"hero": {
+  },
+  "hero": {
     "alt": "Image d'accueil",
     "title": "Recherchez votre itinéraire",
     "description": "Entrez votre point de départ et votre destination pour trouver le meilleur itinéraire :",

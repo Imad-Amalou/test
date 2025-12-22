@@ -4,13 +4,15 @@ import logo from "../../Assets/logo1.png";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isAr = i18n.language === "ar";
 
   return (
     <section className="hero-section">
       <img src={bus} alt={t("hero.alt")} className="hero-bg" />
 
-      <div className="hero-card">
+      {/* Texte en RTL uniquement si arabe */}
+      <div className={`hero-card ${isAr ? "text-ar" : ""}`}>
         <img src={logo} alt="Logo" />
 
         <h2>{t("hero.title")}</h2>

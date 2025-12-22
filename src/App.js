@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./config/ScrollToTop";
 import { useTranslation } from "react-i18next";
+
 import Home from "./pages/home/home";
 import Contact from "./pages/Contact/Contact";
 import EspaceTransporteur from "./pages/EspaceTransporteur/EspaceTransporteur";
@@ -16,11 +17,13 @@ import PolitiqueCookies from "./pages/PolitiqueCookies/PolitiqueCookies";
 
 function App() {
   const { i18n } = useTranslation();
+  const isAr = i18n.language === "ar";
 
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className={i18n.language === "ar" ? "arabic" : ""}>
+
+      <div className={isAr ? "text-ar" : ""}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />

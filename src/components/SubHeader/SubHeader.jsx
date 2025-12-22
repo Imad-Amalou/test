@@ -5,10 +5,12 @@ import { useTranslation } from "react-i18next";
 import logo from "../../Assets/logo.png";
 
 const SubHeader = () => {
-  const { t, i18n } = useTranslation(); // ✅ i18n
+  const { t, i18n } = useTranslation(); 
   const [openMenu, setOpenMenu] = useState(false);
-  const [activeLink, setActiveLink] = useState("/"); 
+  const [activeLink, setActiveLink] = useState("/");
   const location = useLocation();
+
+  const isAr = i18n.language === "ar"; 
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -28,7 +30,7 @@ const SubHeader = () => {
       </button>
 
       <nav className={openMenu ? "open" : ""}>
-        <ul className="main-menu">
+        <ul className={`main-menu ${isAr ? "text-ar" : ""}`}>
           <li>
             <Link
               to="/"
@@ -38,6 +40,7 @@ const SubHeader = () => {
               {t("menu.home")}
             </Link>
           </li>
+
           <li>
             <Link
               to="/AgencesSogral"
@@ -46,6 +49,7 @@ const SubHeader = () => {
             >
               {t("menu.agences")}
             </Link>
+
             <ul className="sub-menu">
               <li>{t("menu.agences.map")}</li>
               <li>{t("menu.agences.photos")}</li>
@@ -61,6 +65,7 @@ const SubHeader = () => {
             >
               {t("menu.locaux")}
             </Link>
+
             <ul className="sub-menu">
               <li>{t("menu.locaux.consultation")}</li>
               <li>{t("menu.locaux.demande")}</li>

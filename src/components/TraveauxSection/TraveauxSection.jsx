@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import "./TraveauxSection.css";
 import logo from "../../Assets/logo1.png";
+import { useTranslation } from "react-i18next";
 
 const TravauxSection = () => {
   const { t } = useTranslation();
@@ -12,7 +12,7 @@ const TravauxSection = () => {
         <div className="travaux-left">
           <img
             src={logo}
-            alt="SOGRALE"
+            alt={t("travaux.title")}
             className="travaux-icon"
           />
         </div>
@@ -20,6 +20,7 @@ const TravauxSection = () => {
         <div className="travaux-right">
           <h2>{t("travaux.title")}</h2>
 
+          {/* \n\n dans JSON → lignes séparées */}
           <p style={{ whiteSpace: "pre-line" }}>
             {t("travaux.description")}
           </p>

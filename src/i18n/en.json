@@ -1,18 +1,18 @@
 {
   "travaux": {
     "title": "SOGRALE Presentation",
-    "description": "SOGRALE (Company for the Management and Development of Transport Lines) is an Algerian company specialized in the management, operation and development of urban and intercity transport networks.\n\nThanks to a qualified team and modern solutions, the company works to facilitate mobility, optimize routes and ensure accessible transport for everyone.",
+    "description": "SOGRALE (Company for the Management and Implementation of Transport Lines) is an Algerian company specialized in the management, operation and development of urban and interurban transport networks.\n\nThanks to a qualified team and modern solutions, the company works to facilitate mobility, optimize routes and ensure an accessible transport experience for everyone.",
     "more": "See more"
   },
-   "menu": {
+  "menu": {
     "home": "Home",
     "agences": "SOGRAL Agencies",
-    "agences.map": "Show agencies on Google Maps",
+    "agences.map": "Display agencies on Google Maps",
     "agences.photos": "Photos",
     "agences.videos": "Videos",
-    "locaux": "Commercial Spaces",
+    "locaux": "Commercial premises",
     "locaux.consultation": "Consultation by agencies",
-    "locaux.demande": "Rental request (direct)",
+    "locaux.demande": "Rental request (direct agreement)",
     "voyageur": "Traveler Space",
     "transporteur": "Transporter Space",
     "contact": "Help & Contact"
@@ -20,8 +20,8 @@
   "hero": {
     "alt": "Home image",
     "title": "Search your route",
-    "description": "Enter your start point and destination to find the best route:",
-    "start": "Start point",
+    "description": "Enter your starting point and destination to find the best route:",
+    "start": "Starting point",
     "end": "Destination",
     "transport": "Transport type",
     "bus": "Bus",
@@ -29,6 +29,4 @@
     "taxi": "Taxi",
     "search": "Search"
   }
-
-
 }
