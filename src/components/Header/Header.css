@@ -1,6 +1,4 @@
-/* Header.css - Version corrigée */
 
-/* --- Header principal --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -10,14 +8,14 @@ header {
     border-radius: 10px;
     margin: 10px;
     flex-wrap: wrap;
-    /* Assure que rien ne dépasse */
+
     overflow: hidden;
 }
 
 .left-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .left-buttons button {
