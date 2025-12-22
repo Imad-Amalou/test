@@ -10,8 +10,6 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <img src={bus} alt={t("hero.alt")} className="hero-bg" />
-
-      {/* Texte en RTL uniquement si arabe */}
       <div className={`hero-card ${isAr ? "text-ar" : ""}`}>
         <img src={logo} alt="Logo" />
 

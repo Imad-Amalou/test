@@ -147,7 +147,7 @@ header {
     
     .language-select .options {
         right: auto;
-        left: 0;
+        right: 0;
     }
 }
 

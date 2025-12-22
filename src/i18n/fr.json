@@ -28,5 +28,36 @@
     "train": "Train",
     "taxi": "Taxi",
     "search": "Chercher"
+  },
+  "footer": {
+    "about": {
+      "title": "À propos de Sogral",
+      "description": "Découvrez nos services de transport et nos offres pour faciliter vos déplacements en Algérie."
+    },
+    "services": {
+      "title": "Nos services",
+      "list": ["Réservation en ligne", "Consulter les trajets", "Paiement sécurisé", "Service client"]
+    },
+    "support": {
+      "title": "Support",
+      "list": ["FAQ", "Contact", "Assistance", "Plan du site"]
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Inscrivez-vous pour recevoir les dernières nouvelles et offres de Sogral.",
+      "placeholder": "Votre email",
+      "button": "S’inscrire"
+    },
+    "quickLinks": {
+      "home": "Accueil",
+      "routes": "Itinéraires",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "copyright": "© 2025 Sogral. Tous droits réservés."
+  },
+  "search": {
+    "placeholder": "Rechercher..."
   }
+
 }

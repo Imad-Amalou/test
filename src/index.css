@@ -20,5 +20,12 @@ html, body {
 
 .text-ar {
   direction: right;       
-  text-align: right;   
+  text-align: right; 
+  font-size: 1.2em;  
+}
+
+.text-ar input,.text-ar select{
+  direction: right;       
+  text-align: right; 
+  font-size: 1.2em;  
 }

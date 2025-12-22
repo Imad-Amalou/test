@@ -28,5 +28,36 @@
     "train": "Train",
     "taxi": "Taxi",
     "search": "Search"
+  },
+  "footer": {
+    "about": {
+      "title": "About Sogral",
+      "description": "Discover our transport services and offers to make your trips in Algeria easier."
+    },
+    "services": {
+      "title": "Our Services",
+      "list": ["Online Booking", "View Routes", "Secure Payment", "Customer Service"]
+    },
+    "support": {
+      "title": "Support",
+      "list": ["FAQ", "Contact", "Assistance", "Site Map"]
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Sign up to receive the latest news and offers from Sogral.",
+      "placeholder": "Your email",
+      "button": "Subscribe"
+    },
+    "quickLinks": {
+      "home": "Home",
+      "routes": "Routes",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "copyright": "© 2025 Sogral. All rights reserved."
+  },
+  "search": {
+    "placeholder": "Search..."
   }
+
 }

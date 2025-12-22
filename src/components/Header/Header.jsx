@@ -4,13 +4,12 @@ import { FaSearch } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation(); // 🔑 on ajoute t
 
   const [lang, setLang] = useState(i18n.language || "fr");
   const [openLang, setOpenLang] = useState(false);
   const languageRef = useRef(null);
 
-  // Fermer le menu si clic à l'extérieur
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (languageRef.current && !languageRef.current.contains(event.target)) {
@@ -21,10 +20,9 @@ const Header = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  // 🔁 Changement de langue GLOBAL
   const handleLangClick = (value) => {
     setLang(value);
-    i18n.changeLanguage(value);   // ✅ ICI la magie
+    i18n.changeLanguage(value);
     setOpenLang(false);
   };
 
@@ -36,7 +34,11 @@ const Header = () => {
 
       <div className="right-controls">
         <div className="search-container2">
-          <input type="text" placeholder="Rechercher..." />
+          <input
+            type="text"
+            placeholder={t("search.placeholder")} // 🔑 placeholder traduit
+            className={lang === "ar" ? "text-ar" : ""} // 🔑 alignement à droite si arabe
+          />
           <span className="search-icon2">
             <FaSearch />
           </span>
