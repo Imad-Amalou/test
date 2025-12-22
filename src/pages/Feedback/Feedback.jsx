@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import Footer from "../../components/Footer/Footer";
 import "./Feedback.css";
-
+import { FaStar, FaPen, FaChartBar } from "react-icons/fa";
 export default function Feedback() {
   const [activeTab, setActiveTab] = useState("avis");
   const [avisSubmitted, setAvisSubmitted] = useState(false);
@@ -243,33 +243,38 @@ export default function Feedback() {
         </section>
 
         {/* Navigation Tabs */}
-        <section className="tabs-section">
-          <div className="container">
-            <div className="feedback-tabs">
-              <button 
-                className={`feedback-tab ${activeTab === "avis" ? "active" : ""}`}
-                onClick={() => setActiveTab("avis")}
-              >
-                <span className="tab-icon">⭐</span>
-                <span className="tab-text">Donner un avis</span>
-              </button>
-              <button 
-                className={`feedback-tab ${activeTab === "doleance" ? "active" : ""}`}
-                onClick={() => setActiveTab("doleance")}
-              >
-                <span className="tab-icon">📝</span>
-                <span className="tab-text">Soumettre une doléance</span>
-              </button>
-              <button 
-                className={`feedback-tab ${activeTab === "sondage" ? "active" : ""}`}
-                onClick={() => setActiveTab("sondage")}
-              >
-                <span className="tab-icon">📊</span>
-                <span className="tab-text">Participer à un sondage</span>
-              </button>
-            </div>
+       <section className="tabs-section">
+        <div className="container">
+          <div className="feedback-tabs">
+
+            <button
+              className={`feedback-tab ${activeTab === "avis" ? "active" : ""}`}
+              onClick={() => setActiveTab("avis")}
+            >
+              <span className="tab-icon icon-avis"><FaStar /></span>
+              <span className="tab-text">Donner un avis</span>
+            </button>
+
+            <button
+              className={`feedback-tab ${activeTab === "doleance" ? "active" : ""}`}
+              onClick={() => setActiveTab("doleance")}
+            >
+              <span className="tab-icon icon-doleance"><FaPen /></span>
+              <span className="tab-text">Soumettre une doléance</span>
+            </button>
+
+            <button
+              className={`feedback-tab ${activeTab === "sondage" ? "active" : ""}`}
+              onClick={() => setActiveTab("sondage")}
+            >
+              <span className="tab-icon icon-sondage"><FaChartBar /></span>
+              <span className="tab-text">Participer à un sondage</span>
+            </button>
+
           </div>
-        </section>
+        </div>
+      </section>
+
 
         {/* Section Contenu */}
         <section className="content-section">

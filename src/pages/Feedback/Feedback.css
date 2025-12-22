@@ -114,6 +114,18 @@
   margin-bottom: 5px;
 }
 
+.icon-avis {
+  color: #f4b400; 
+}
+
+.icon-doleance {
+  color: #1e88e5;
+}
+
+.icon-sondage {
+  color: #2e7d32;
+}
+
 .tab-text {
   font-weight: 600;
   font-size: 1rem;
