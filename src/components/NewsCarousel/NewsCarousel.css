@@ -25,6 +25,7 @@
 }
 
 .news-carousel {
+    height: 90vh;
     overflow: hidden;
     position: relative;
 }
@@ -45,8 +46,9 @@
 
 .news-card img {
     width: 100%;
-    height: 180px;
+    height: 80%;
     object-fit: cover;
+    margin-top: 50px;
 }
 
 .news-content {

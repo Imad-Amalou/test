@@ -130,3 +130,10 @@
         width: 160px;
     }
 }
+@media (min-width:1500px ) {
+    .hero-card img {
+    width: 600px;       
+    margin: 0 auto;
+}
+
+}

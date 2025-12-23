@@ -53,7 +53,7 @@ const SubHeader = () => {
             <ul className="sub-menu">
               <li><Link to={"/Actualite"}>{t("menu.agences.map")}</Link></li>
               <li><Link to={"/Actualite"}>{t("menu.agences.actu")}</Link></li>
-              <li><Link to={"/Actualite"}>{t("menu.agences.map")}</Link></li>
+              <li><Link to={"/Actualite"}>{t("menu.agences.ASD")}</Link></li>
             </ul>
           </li>
 
@@ -67,8 +67,7 @@ const SubHeader = () => {
             </Link>
 
             <ul className="sub-menu">
-              <li>{t("menu.locaux.consultation")}</li>
-              <li>{t("menu.locaux.demande")}</li>
+             
             </ul>
           </li>
 

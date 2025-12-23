@@ -606,11 +606,11 @@ export default function EspaceVoyageur() {
                 <h2>L'application SOGRAL Voyageur</h2>
                 <p>Téléchargez notre application et voyagez encore plus facilement</p>
                 <ul className="app-features">
-                  <li>✅ Réservation en 2 minutes</li>
-                  <li>✅ E-billets sur mobile</li>
-                  <li>✅ Notifications en temps réel</li>
-                  <li>✅ Suivi de votre bus</li>
-                  <li>✅ Gestion des modifications</li>
+                  <li> Réservation en 2 minutes</li>
+                  <li> E-billets sur mobile</li>
+                  <li> Notifications en temps réel</li>
+                  <li> Suivi de votre bus</li>
+                  <li> Gestion des modifications</li>
                 </ul>
                 <div className="app-buttons">
   <button className="app-store-btn">

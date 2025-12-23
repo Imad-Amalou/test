@@ -3,9 +3,11 @@ import "./Header.css";
 import { FaSearch } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { MdTranslate } from "react-icons/md";
+import { HiOutlineTranslate } from "react-icons/hi";
+import { TbLanguage } from "react-icons/tb";
 const Header = () => {
   const { i18n, t } = useTranslation();
-
   const [lang, setLang] = useState(i18n.language || "fr");
   const [openLang, setOpenLang] = useState(false);
   const languageRef = useRef(null);
@@ -26,17 +28,24 @@ const Header = () => {
     setOpenLang(false);
   };
 
+  const renderLangIcon = (language) => (
+    <div className={`lang-icon ${language}`}>
+      {language.toUpperCase()}
+    </div>
+  );
+
   return (
     <header>
       <div className="left-buttons">
-        <Link to="/Connexion" className="connexion-btn">Connexion</Link>
+        <Link to="/Connexion" className="connexion-btn">{t("connexion.title")}</Link>
       </div>
+
       <div className="right-controls">
         <div className="search-container2">
           <input
             type="text"
-            placeholder={t("search.placeholder")} 
-            className={lang === "ar" ? "text-ar" : ""} 
+            placeholder={t("search.placeholder")}
+            className={lang === "ar" ? "text-ar" : ""}
           />
           <span className="search-icon2">
             <FaSearch />
@@ -45,29 +54,20 @@ const Header = () => {
 
         <div className="language-select" ref={languageRef}>
           <div className="selected" onClick={() => setOpenLang(!openLang)}>
-            <img
-              src={
-                lang === "fr"
-                  ? "https://flagcdn.com/w20/fr.png"
-                  : lang === "ar"
-                  ? "https://flagcdn.com/w20/dz.png"
-                  : "https://flagcdn.com/w20/gb.png"
-              }
-              alt={lang.toUpperCase()}
-            />
+            {renderLangIcon(lang)}
             <span>{lang.toUpperCase()}</span>
           </div>
 
           {openLang && (
             <div className="options">
               <div className="option" onClick={() => handleLangClick("fr")}>
-                <img src="https://flagcdn.com/w20/fr.png" alt="FR" /> FR
+                 <MdTranslate className="lang-icon" />FR
               </div>
               <div className="option" onClick={() => handleLangClick("ar")}>
-                <img src="https://flagcdn.com/w20/dz.png" alt="AR" /> AR
+                <HiOutlineTranslate className="lang-icon" />AR
               </div>
               <div className="option" onClick={() => handleLangClick("en")}>
-                <img src="https://flagcdn.com/w20/gb.png" alt="EN" /> EN
+                <TbLanguage className="lang-icon" /> EN
               </div>
             </div>
           )}

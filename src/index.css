@@ -1,10 +1,88 @@
-/* eviter les marge du nav*/
+@font-face {
+  font-family: 'DIN Next W23';
+  src: url('../public/Fonts/DIN-Next-LT-W23-Ultra-Light.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next W23';
+  src: url('../public/Fonts/DIN-Next-LT-W23-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next W23';
+  src: url('../public/Fonts/DIN-Next-LT-W23-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next W23';
+  src: url('../public/Fonts/DIN-Next-LT-W23-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next W23';
+  src: url('../public/Fonts/DIN-Next-LT-W23-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next W23';
+  src: url('../public/Fonts/DIN-Next-LT-W23-Heavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next W23';
+  src: url('../public/Fonts/DIN-Next-LT-W23-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: 'DIN Next W23', Arial, sans-serif;
+  font-weight: 800;
+}
+
+h3, h4 {
+  font-family: 'DIN Next W23', Arial, sans-serif;
+  font-weight: 500;
+}
+
+h5, h6 {
+  font-family: 'DIN Next W23', Arial, sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'DIN Next W23', Arial, sans-serif;
+  font-weight: 400;
+}
+
+a, button {
+  font-family: 'DIN Next W23', Arial, sans-serif;
+  font-weight: 500;
+}
+
+input, textarea, select {
+  font-family: 'DIN Next W23', Arial, sans-serif;
+  font-weight: 300;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* charte de la sogral*/
+
 :root {
   --primary-green: #00592D;
   --secondary-green: #95C11F;
@@ -32,29 +110,16 @@ html, body {
   font-size: 1.2em;  
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 600;
-  margin: 0 0 0.6em 0;
-}
-
-p {
-  margin-bottom: 1em;
-}
-
-a {
-  font-family: 'Roboto', Arial, sans-serif;
-  text-decoration: none;
-}
 
 button,
 input,
 textarea,
 select {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'DIN Next W23', Arial, sans-serif;
+  font-weight: 400;
 }
 
-/*animation*/
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }

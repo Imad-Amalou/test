@@ -6,11 +6,11 @@
   },
   "menu": {
     "home": "Home",
-     "agences": {
-    "title": "SOGRAL Agencies",
-    "map": "Display agencies on Google Maps",
-    "photos": "Photos",
-    "videos": "Videos"
+    "agences": {
+    "title": "About Sogral",
+    "map": "Sogral Agencies",
+    "actu": "News",
+    "ASD": "Feedback, Complaint, Survey"
   },
     "locaux": "Commercial premises",
     "locaux.consultation": "Consultation by agencies",
@@ -61,8 +61,9 @@
   "search": {
     "placeholder": "Search..."
   },
-
-
+ "connexion":{
+      "title" : "Connexion"
+  },
   "asd": {
     "title": "Share, participate, report — your voice matters",
     "description": "At SOGRAL, we continuously improve service quality thanks to your feedback. Share your opinion, take part in quick surveys, or submit a complaint — every contribution helps us make your journeys safer and smoother.",
