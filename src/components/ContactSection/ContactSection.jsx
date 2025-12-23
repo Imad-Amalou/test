@@ -11,7 +11,7 @@ export default function ContactCTA() {
           Vous n’avez pas trouvé <br />
           réponse à votre question ?
         </h2>
-        <img
+        <img 
           src={Contact}
           alt="Illustration contact"
         />

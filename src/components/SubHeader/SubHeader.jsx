@@ -47,13 +47,13 @@ const SubHeader = () => {
               className={activeLink === "/AgencesSogral" ? "active" : ""}
               onClick={() => setOpenMenu(false)}
             >
-              {t("menu.agences")}
+              {t("menu.agences.title")}
             </Link>
 
             <ul className="sub-menu">
-              <li>{t("menu.agences.map")}</li>
-              <li>{t("menu.agences.photos")}</li>
-              <li>{t("menu.agences.videos")}</li>
+              <li><Link to={"/Actualite"}>{t("menu.agences.map")}</Link></li>
+              <li><Link to={"/Actualite"}>{t("menu.agences.actu")}</Link></li>
+              <li><Link to={"/Actualite"}>{t("menu.agences.map")}</Link></li>
             </ul>
           </li>
 

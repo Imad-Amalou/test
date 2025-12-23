@@ -160,14 +160,9 @@ export default function APropos() {
                 <h2>Notre Histoire</h2>
                 <div className="histoire-intro">
                   <p>
-                    Fondée en 2008, <strong>SOGRAL</strong> (Société de Gestion et de Réalisation des Lignes de Transport) 
-                    est née d'une vision ambitieuse : révolutionner le transport en Algérie en offrant des services 
-                    modernes, fiables et accessibles à tous.
-                  </p>
-                  <p>
-                    Depuis nos débuts modestes avec seulement 10 bus, nous avons grandi pour devenir le leader 
-                    national du transport, connectant des millions d'Algériens chaque année à travers un réseau 
-                    étendu couvrant tout le territoire national.
+                  La société <strong>EPE Sogral Spa</strong> a été créée le 30 mars 1994 avec un capital social de 90 000 000 DA, et son siège est situé à Hussein Dey, Alger.
+                  À ses débuts, elle ne disposait que d’une seule gare routière, la Gare des Grands Invalides de la Guerre de la Libération Nationale, sur plus de huit hectares. Affiliée auparavant à la SGP FIDBER, Sogral s’est progressivement imposée comme un acteur majeur du transport en Algérie.
+                  Aujourd’hui, elle gère un vaste réseau de gares routières, modernise ses services avec des solutions numériques et connecte chaque année des millions de voyageurs à travers le pays, renforçant ainsi la mobilité et le développement du transport terrestre national.
                   </p>
                 </div>
                 

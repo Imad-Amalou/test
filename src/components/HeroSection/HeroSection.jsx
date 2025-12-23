@@ -1,5 +1,5 @@
 import "./HeroSection.css";
-import bus from "../../Assets/bus.jpg";
+import bus from "../../Assets/bus1.jpg";
 import logo from "../../Assets/logo1.png";
 import { useTranslation } from "react-i18next";
 

@@ -1,8 +1,10 @@
+/* eviter les marge du nav*/
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* charte de la sogral*/
 :root {
   --primary-green: #00592D;
   --secondary-green: #95C11F;
@@ -17,7 +19,7 @@ html, body {
   --warning: #f39c12;
   --danger: #e74c3c;
 }
-
+/* pour les direction des texte , inputs , selects pour la langue arabe */
 .text-ar {
   direction: right;       
   text-align: right; 
@@ -50,4 +52,15 @@ input,
 textarea,
 select {
   font-family: 'Roboto', Arial, sans-serif;
+}
+
+/*animation*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }

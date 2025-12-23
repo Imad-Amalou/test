@@ -4,12 +4,16 @@
     "description": "La SOGRALE (Société de Gestion et de Réalisation des Lignes de Transport) est une entreprise algérienne spécialisée dans la gestion, l’exploitation et le développement des réseaux de transport urbain et interurbain.\n\nGrâce à une équipe qualifiée et à des solutions modernes, l’entreprise œuvre à faciliter les déplacements, optimiser les itinéraires et garantir une expérience de transport accessible à tous.",
     "more": "Voir plus"
   },
+  
+
   "menu": {
     "home": "Accueil",
-    "agences": "Agences SOGRAL",
-    "agences.map": "Affichage des agences sur Google Maps",
-    "agences.photos": "Photos",
-    "agences.videos": "Vidéos",
+    "agences": {
+    "title": "A propos Sogral",
+    "map": "A propos de la Sogral",
+    "actu": "Actualite",
+    "videos": "Vidéos"
+    },
     "locaux": "Locaux commerciaux",
     "locaux.consultation": "Consultation par agences",
     "locaux.demande": "Demande de location (gré à gré)",
@@ -17,6 +21,8 @@
     "transporteur": "Espace Transporteur",
     "contact": "Aide & Contact"
   },
+
+
   "hero": {
     "alt": "Image d'accueil",
     "title": "Recherchez votre itinéraire",
@@ -29,6 +35,8 @@
     "taxi": "Taxi",
     "search": "Chercher"
   },
+
+
   "footer": {
     "about": {
       "title": "À propos de Sogral",
@@ -56,8 +64,28 @@
     },
     "copyright": "© 2025 Sogral. Tous droits réservés."
   },
+
+
   "search": {
     "placeholder": "Rechercher..."
-  }
+  },
 
+
+  "asd": {
+    "title": "Partagez, participez, signalez — votre voix compte",
+    "description": "Chez SOGRAL, nous améliorons quotidiennement la qualité du service grâce à vos retours. Donnez votre avis, répondez à nos sondages rapides ou signalez une doléance : chaque contribution nous aide à rendre vos trajets plus sûrs et plus fluides.",
+
+    "avis": {
+      "title": "Avis",
+      "action": "Donner un avis"
+    },
+    "sondage": {
+      "title": "Sondages",
+      "action": "Participer à un sondage"
+    },
+    "doleance": {
+      "title": "Doléances",
+      "action": "Soumettre une doléance"
+    }
+  }
 }

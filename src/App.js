@@ -14,7 +14,7 @@ import Services from "./pages/Services/Services";
 import Sitemap from "./pages/SiteMap/SiteMap";
 import MentionsLegales from "./pages/MentionsLegales/MentionsLegales";
 import PolitiqueCookies from "./pages/PolitiqueCookies/PolitiqueCookies";
-
+import Actualite from "./pages/actualite/actualite";
 function App() {
   const { i18n } = useTranslation();
   const isAr = i18n.language === "ar";
@@ -37,6 +37,7 @@ function App() {
           <Route path="/Sitemap" element={<Sitemap />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/Cookies" element={<PolitiqueCookies />} />
+          <Route path="/Actualite" element={<Actualite />} />
         </Routes>
       </div>
     </BrowserRouter>
