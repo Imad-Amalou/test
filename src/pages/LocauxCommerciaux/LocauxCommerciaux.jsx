@@ -21,87 +21,54 @@ export default function LocauxCommerciaux() {
     typeDemande: "location"
   });
 
-  // Données des locaux commerciaux
-  const locaux = [
-    {
-      id: 1,
-      agence: "Alger Centre",
-      ville: "Alger",
-      adresse: "123 Rue des Transports, Alger Centre",
-      surface: "120 m²",
-      prix: "150.000 DA/mois",
-      etat: "Disponible",
-      photos: ["/images/local1.jpg", "/images/local2.jpg"],
-      description: "Local commercial lumineux, idéal pour agence de voyage ou service client.",
-      equipements: ["Climatisation", "Système de sécurité", "Parking", "Internet haut débit"],
-      dateDispo: "Immédiate"
-    },
-    {
-      id: 2,
-      agence: "Oran",
-      ville: "Oran",
-      adresse: "45 Avenue de l'Indépendance",
-      surface: "85 m²",
-      prix: "95.000 DA/mois",
-      etat: "Disponible",
-      photos: ["/images/local3.jpg"],
-      description: "Espace moderne au cœur du centre-ville d'Oran.",
-      equipements: ["Climatisation", "Accès handicapés", "Store électrique"],
-      dateDispo: "01/04/2024"
-    },
-    {
-      id: 3,
-      agence: "Constantine",
-      ville: "Constantine",
-      adresse: "78 Boulevard de la République",
-      surface: "200 m²",
-      prix: "220.000 DA/mois",
-      etat: "Loué",
-      photos: ["/images/local4.jpg"],
-      description: "Grand local adapté pour centre de réservation.",
-      equipements: ["Climatisation", "Salle de réunion", "Parking sécurisé"],
-      dateDispo: "01/06/2024"
-    },
-    {
-      id: 4,
-      agence: "Annaba",
-      ville: "Annaba",
-      adresse: "12 Rue du Port",
-      surface: "65 m²",
-      prix: "75.000 DA/mois",
-      etat: "Disponible",
-      photos: ["/images/local5.jpg"],
-      description: "Local récemment rénové près du port.",
-      equipements: ["Climatisation", "Vidéosurveillance"],
-      dateDispo: "Immédiate"
-    },
-    {
-      id: 5,
-      agence: "Béjaïa",
-      ville: "Béjaïa",
-      adresse: "34 Avenue du 1er Novembre",
-      surface: "150 m²",
-      prix: "160.000 DA/mois",
-      etat: "Disponible",
-      photos: ["/images/local6.jpg"],
-      description: "Local spacieux avec vitrine sur rue principale.",
-      equipements: ["Climatisation", "Alarme", "Double vitrage"],
-      dateDispo: "15/05/2024"
-    },
-    {
-      id: 6,
-      agence: "Tizi Ouzou",
-      ville: "Tizi Ouzou",
-      adresse: "56 Rue Abane Ramdane",
-      surface: "95 m²",
-      prix: "105.000 DA/mois",
-      etat: "En rénovation",
-      photos: ["/images/local7.jpg"],
-      description: "Local en cours de rénovation, disponible prochainement.",
-      equipements: ["Climatisation", "Nouvel éclairage LED"],
-      dateDispo: "01/07/2024"
-    }
-  ];
+ const locaux = [
+  {
+    id: 1,
+    agence: "Alger Centre",
+    ville: "Alger",
+    adresse: "123 Rue des Transports, Alger Centre",
+    surface: "120 m²",
+    prix: "150.000 DA/mois",
+    etat: "Disponible",
+     photos: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    description: "Local commercial lumineux, idéal pour agence de voyage ou service client.",
+    equipements: ["Climatisation", "Système de sécurité", "Parking", "Internet haut débit"],
+    dateDispo: "Immédiate"
+  },
+  {
+    id: 2,
+    agence: "Oran",
+    ville: "Oran",
+    adresse: "45 Avenue de l'Indépendance",
+    surface: "85 m²",
+    prix: "95.000 DA/mois",
+    etat: "Disponible",
+     photos: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    description: "Espace moderne au cœur du centre-ville d'Oran.",
+    equipements: ["Climatisation", "Accès handicapés", "Store électrique"],
+    dateDispo: "01/04/2024"
+  },
+  {
+    id: 3,
+    agence: "Constantine",
+    ville: "Constantine",
+    adresse: "78 Boulevard de la République",
+    surface: "200 m²",
+    prix: "220.000 DA/mois",
+    etat: "Loué",
+    photos: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    description: "Grand local adapté pour centre de réservation.",
+    equipements: ["Climatisation", "Salle de réunion", "Parking sécurisé"],
+    dateDispo: "01/06/2024"
+  }
+];
+
 
   // Villes disponibles pour filtrage
   const villes = ["Toutes", "Alger", "Oran", "Constantine", "Annaba", "Béjaïa", "Tizi Ouzou"];

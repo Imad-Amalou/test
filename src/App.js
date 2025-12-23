@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./config/ScrollToTop";
 import { useTranslation } from "react-i18next";
-
+import Connexion from "./pages/Connexion/Connexion";
 import Home from "./pages/home/home";
 import Contact from "./pages/Contact/Contact";
 import EspaceTransporteur from "./pages/EspaceTransporteur/EspaceTransporteur";
@@ -38,6 +38,7 @@ function App() {
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/Cookies" element={<PolitiqueCookies />} />
           <Route path="/Actualite" element={<Actualite />} />
+          <Route path="/Connexion" element={<Connexion />} />
         </Routes>
       </div>
     </BrowserRouter>

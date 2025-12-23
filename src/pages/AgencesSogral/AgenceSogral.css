@@ -63,17 +63,23 @@
   letter-spacing: 1px;
 }
 
-/* Titres de section */
-.section-title {
+.section-title4 , .section-title5 {
   text-align: center;
   font-size: 2.5rem;
-  color: var(--primary-green);
   margin-bottom: 15px;
   position: relative;
   padding-bottom: 15px;
 }
 
-.section-title::after {
+.section-title5 {
+  color: var(--primary-green-);
+}
+.section-title5 {
+  color: var(--white);
+}
+
+
+.section-title5::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1144,7 +1150,7 @@
     font-size: 2.2rem;
   }
   
-  .section-title {
+  .section-title5 {
     font-size: 2rem;
   }
   

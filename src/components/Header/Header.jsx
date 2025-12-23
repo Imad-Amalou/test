@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Header.css";
 import { FaSearch } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom";
 const Header = () => {
-  const { i18n, t } = useTranslation(); // 🔑 on ajoute t
+  const { i18n, t } = useTranslation();
 
   const [lang, setLang] = useState(i18n.language || "fr");
   const [openLang, setOpenLang] = useState(false);
@@ -29,15 +29,14 @@ const Header = () => {
   return (
     <header>
       <div className="left-buttons">
-        {/* futur */}
+        <Link to="/Connexion" className="connexion-btn">Connexion</Link>
       </div>
-
       <div className="right-controls">
         <div className="search-container2">
           <input
             type="text"
-            placeholder={t("search.placeholder")} // 🔑 placeholder traduit
-            className={lang === "ar" ? "text-ar" : ""} // 🔑 alignement à droite si arabe
+            placeholder={t("search.placeholder")} 
+            className={lang === "ar" ? "text-ar" : ""} 
           />
           <span className="search-icon2">
             <FaSearch />

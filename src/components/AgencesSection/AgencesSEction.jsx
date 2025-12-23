@@ -1,21 +1,21 @@
 import "./AgencesSection.css";
 import { Link } from "react-router-dom";
-
+import img from "../../Assets/ag.png";
 const agences = [
   {
     title: "Agence de Béjaïa",
     description: "Retrouvez notre équipe dans l’agence principale au centre-ville.",
-    img: "images/IMAG2907.jpg",
+    img: img
   },
   {
     title: "Agence d’Akbou",
     description: "Nos conseillers vous accueillent pour répondre à toutes vos demandes.",
-    img: "images/capture3.jpeg",
+    img: img 
   },
   {
     title: "Agence de Tazmalt",
     description: "Un service de proximité pour mieux vous accompagner.",
-    img: "images/Photo 074.jpg",
+    img: img
   },
 ];
 

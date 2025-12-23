@@ -404,7 +404,7 @@ export default function AgenceSogral() {
         {/* Section Services */}
         <section className="services-section">
           <div className="container">
-            <h2 className="section-title">Services disponibles dans nos agences</h2>
+            <h2 className="section-title4">Services disponibles dans nos agences</h2>
             <p className="section-subtitle">Profitez de tous nos services pour faciliter vos voyages</p>
             
            <div className="services-grid">
@@ -501,7 +501,7 @@ export default function AgenceSogral() {
         {/* Section Contact */}
         <section className="contact-section">
           <div className="container">
-            <h2 className="section-title">Contactez nos agences</h2>
+            <h2 className="section-title5">Contactez nos agences</h2>
             
             <div className="contact-grid">
               <div className="contact-card">
