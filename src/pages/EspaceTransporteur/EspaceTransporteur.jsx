@@ -158,7 +158,7 @@ export default function EspaceTransporteur() {
         {/* Section Avantages */}
         <section className="avantages-section">
           <div className="container">
-            <h2 className="section-title">Pourquoi devenir transporteur SOGRAL ?</h2>
+            <h2 className="section-title6">Pourquoi devenir transporteur SOGRAL ?</h2>
             <p className="section-subtitle">Profitez de nombreux avantages exclusifs</p>
             
             <div className="avantages-grid">
@@ -429,7 +429,7 @@ export default function EspaceTransporteur() {
         {/* Section Documents */}
         <section className="documents-section">
           <div className="container">
-            <h2 className="section-title">Documents requis</h2>
+            <h2 className="section-title6">Documents requis</h2>
             <p className="section-subtitle">Préparez ces documents pour une inscription rapide</p>
             
             <div className="documents-grid">
@@ -450,7 +450,7 @@ export default function EspaceTransporteur() {
         {/* Section Tarifs */}
         <section className="tarifs-section">
           <div className="container">
-            <h2 className="section-title">Nos offres pour transporteurs</h2>
+            <h2 className="section-title6">Nos offres pour transporteurs</h2>
             <p className="section-subtitle">Choisissez l'offre qui correspond à votre activité</p>
             
             <div className="tarifs-grid">
@@ -482,7 +482,7 @@ export default function EspaceTransporteur() {
         {/* Section FAQ */}
         <section className="faq-section">
           <div className="container">
-            <h2 className="section-title">Questions fréquentes</h2>
+            <h2 className="section-title6">Questions fréquentes</h2>
             
             <div className="faq-grid">
               {faq.map((item, index) => (

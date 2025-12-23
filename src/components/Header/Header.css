@@ -162,6 +162,9 @@ header {
         right: auto;
         right: 0;
     }
+    .connexion-btn {
+        margin-bottom: 5px;
+    }
 }
 
 /* S'assurer que le body n'a pas de scroll horizontal */

@@ -62,7 +62,7 @@
 }
 
 /* Titres de section */
-.section-title {
+.section-title6 {
   text-align: center;
   font-size: 2.5rem;
   color: var(--primary-green);
@@ -71,7 +71,7 @@
   padding-bottom: 15px;
 }
 
-.section-title::after {
+.section-title6::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -661,7 +661,7 @@
     font-size: 2.5rem;
   }
   
-  .section-title {
+  .section-title6 {
     font-size: 2rem;
   }
   
@@ -688,6 +688,12 @@
     width: 100%;
     max-width: 300px;
   }
+ .checkbox-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+ }
+  
 }
 
 /* Animations */
