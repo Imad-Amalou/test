@@ -95,7 +95,8 @@
   font-size: 0.9rem;
   color: var(--light-green);
   font-weight: 500;
-  margin-top: 3px;
+  margin-bottom:30px;
+  text-align: center;
 }
 
 .auth-header h1 {
@@ -565,10 +566,7 @@
     border-radius: 15px;
   }
   
-  .auth-forms,
-  .auth-presentation {
-    padding: 2rem;
-  }
+ 
   
   .social-login {
     flex-direction: column;
@@ -594,10 +592,7 @@
 }
 
 @media (max-width: 480px) {
-  .auth-forms,
-  .auth-presentation {
-    padding: 1.5rem;
-  }
+  
   
   .logo-icon {
     width: 40px;
@@ -625,4 +620,8 @@
   .feature-icon {
     margin: 0 auto;
   }
+}
+.logo-connexion{
+  width: 100%;
+  margin: 0 auto;
 }

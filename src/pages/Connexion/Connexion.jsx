@@ -8,7 +8,7 @@ import {
 import Header from '../../components/Header/Header';
 import SubHeader from '../../components/SubHeader/SubHeader';
 import Footer from '../../components/Footer/Footer';
-
+import logo from '../../Assets/logo.png';
 const Connexion = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
@@ -191,13 +191,13 @@ const Connexion = () => {
       <div className="auth-container">
         {/* Colonne gauche - Formulaires */}
         <div className="auth-forms">
-          {/* Logo Sogral */}
+          
           <div className="auth-header">
+            <img className='logo-connexion' src={logo} alt='logo sogral'></img>
             <div className="logo">
-              <div className="logo-icon">S</div>
+   
               <div className="logo-text">
-                <span className="logo-primary">SOGRAL</span>
-                <span className="logo-tagline">Espace client</span>
+               
               </div>
             </div>
             <h1>{isLogin ? 'Connectez-vous' : 'Créez votre compte'}</h1>
