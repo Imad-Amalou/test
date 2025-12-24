@@ -94,17 +94,15 @@
 /* ========================= */
 @media (max-width: 768px) {
     .hero-section {
-        height: auto;              /* ⬅️ TRÈS IMPORTANT */
+        height: auto;              
     }
 
     .hero-card {
-        position: relative;        /* ⬅️ PLUS D’ABSOLUTE */
-        width: 95%;
+        position: relative;        
         min-height: auto;
-        margin: -80px auto 30px;   /* ⬅️ chevauche l’image */
+        margin: -80px auto 30px;   
         left: auto;
         top: auto;
-        padding: 30px;
         transform: none;
     }
 

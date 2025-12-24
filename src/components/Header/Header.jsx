@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Header.css";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch,FaChevronDown } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { MdTranslate } from "react-icons/md";
@@ -31,6 +31,7 @@ const Header = () => {
   const renderLangIcon = (language) => (
     <div className={`lang-icon ${language}`}>
       {language.toUpperCase()}
+      <FaChevronDown className={`chevron ${openLang ? "open" : ""}`} />
     </div>
   );
 

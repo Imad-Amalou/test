@@ -33,12 +33,10 @@
     padding-left: 40px;
 }
 
-/* RIGHT BOX (CHEVAUCHEMENT) */
 .right-box {
     background: #002809;
     color: white;
     border-radius: 25px;
-    padding: 30px;
     width: 45%;
     min-height: 300px;
 

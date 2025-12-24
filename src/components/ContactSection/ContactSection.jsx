@@ -1,33 +1,37 @@
 import { Link } from "react-router-dom";
 import "./ContactSection.css";
-import Contact from "../../Assets/contact.png"
+import Contact from "../../Assets/contact.png";
+import { useTranslation } from "react-i18next";
 
 export default function ContactCTA() {
+const { i18n, t } = useTranslation();
+
   return (
     <section className="contact-section2">
       
-      <div className="left-box">
-        <h2>
-          Vous n’avez pas trouvé <br />
-          réponse à votre question ?
-        </h2>
-        <img 
-          src={Contact}
-          alt="Illustration contact"
-        />
-      </div>
+     <div className={`left-box`}>
+      <h2 className={`${i18n.language === "ar" ? "left-box-ar" : ""}`}>
+        {t("contactCTA.left.title.line1")} <br />
+        {t("contactCTA.left.title.line2")}
+      </h2>
+      <img 
+        className={`${i18n.language === "ar" ? "left-box-ar" : ""}`}
+        src={Contact}
+        alt={t("contactCTA.left.imageAlt")}
+      />
+</div>
 
       <div className="right-box">
-        <h2>Contactez-nous</h2>
+        <h2>{t("contactCTA.right.title")}</h2>
+
         <p>
-          Une question ? Un problème ? <br />
-          Contactez-nous sur l'un de nos canaux :
+          {t("contactCTA.right.text.line1")} <br />
+          {t("contactCTA.right.text.line2")}
         </p>
-        <button>
-          <Link to="/Contact" style={{ textDecoration: "none",color:"black" }}>
-            Nous contacter
-          </Link>
-        </button>
+
+        <Link to="/Contact" className="contact-btn">
+          {t("contactCTA.right.button")}
+        </Link>
       </div>
 
     </section>

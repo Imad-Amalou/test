@@ -22,7 +22,6 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-
       <div className={isAr ? "text-ar" : ""}>
         <Routes>
           <Route path="/" element={<Home />} />

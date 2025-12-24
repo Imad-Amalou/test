@@ -3,14 +3,15 @@ import Header from "../../components/Header/Header";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import Footer from "../../components/Footer/Footer";
 import "./Feedback.css";
-import { FaStar, FaPen, FaChartBar } from "react-icons/fa";
+import { FaStar, FaPen, FaChartBar,FaChartLine, FaClock, FaCheck, FaUsers,FaLock,FaExclamationTriangle  } from "react-icons/fa";
+
 export default function Feedback() {
   const [activeTab, setActiveTab] = useState("avis");
   const [avisSubmitted, setAvisSubmitted] = useState(false);
   const [doleanceSubmitted, setDoleanceSubmitted] = useState(false);
   const [sondageSubmitted, setSondageSubmitted] = useState(false);
 
-  // État pour le formulaire d'avis
+  
   const [avisData, setAvisData] = useState({
     nom: "",
     email: "",
@@ -20,7 +21,6 @@ export default function Feedback() {
     recommander: null
   });
 
-  // État pour le formulaire de doléance
   const [doleanceData, setDoleanceData] = useState({
     nom: "",
     prenom: "",
@@ -34,7 +34,7 @@ export default function Feedback() {
     pieceJointe: null
   });
 
-  // État pour le formulaire de sondage
+
   const [sondageData, setSondageData] = useState({
     age: "",
     frequence: "",
@@ -44,7 +44,6 @@ export default function Feedback() {
     suggestions: ""
   });
 
-  // Données pour les sondages actifs
   const sondagesActifs = [
     {
       id: 1,
@@ -275,15 +274,11 @@ export default function Feedback() {
         </div>
       </section>
 
-
-        {/* Section Contenu */}
         <section className="content-section">
           <div className="container">
-            {/* Section Avis */}
             {activeTab === "avis" && (
               <div className="tab-content">
                 <div className="content-grid">
-                  {/* Formulaire Avis */}
                   <div className="form-container">
                     <div className="form-header">
                       <h2>Partagez votre expérience</h2>
@@ -405,7 +400,6 @@ export default function Feedback() {
                     )}
                   </div>
 
-                  {/* Avis Récents */}
                   <div className="sidebar">
                     <div className="sidebar-card">
                       <h3>Avis récents</h3>
@@ -440,11 +434,9 @@ export default function Feedback() {
               </div>
             )}
 
-            {/* Section Doléance */}
             {activeTab === "doleance" && (
               <div className="tab-content">
                 <div className="content-grid">
-                  {/* Formulaire Doléance */}
                   <div className="form-container wide">
                     <div className="form-header">
                       <h2>Signalez un problème</h2>
@@ -613,37 +605,40 @@ export default function Feedback() {
                     )}
                   </div>
 
-                  {/* Infos Doléance */}
                   <div className="sidebar">
                     <div className="sidebar-card">
                       <h3>Engagements SOGRAL</h3>
                       <div className="commitments-list">
+
                         <div className="commitment-item">
-                          <div className="commitment-icon">⏱️</div>
+                          <div className="commitment-icon"><FaClock size={24} color="#00592D" /></div>
                           <div className="commitment-content">
                             <h4>Réponse rapide</h4>
                             <p>Nous vous répondons dans un délai maximum de 48h</p>
                           </div>
                         </div>
+
                         <div className="commitment-item">
-                          <div className="commitment-icon">🔒</div>
+                          <div className="commitment-icon"><FaLock size={24} color="#00592D" /></div>
                           <div className="commitment-content">
                             <h4>Confidentialité</h4>
                             <p>Vos informations personnelles sont protégées</p>
                           </div>
                         </div>
+
                         <div className="commitment-item">
-                          <div className="commitment-icon">✅</div>
+                          <div className="commitment-icon"><FaCheck size={24} color="#00592D" /></div>
                           <div className="commitment-content">
                             <h4>Suivi personnalisé</h4>
                             <p>Chaque doléance fait l'objet d'un suivi individuel</p>
                           </div>
                         </div>
+
                       </div>
                     </div>
 
                     <div className="sidebar-card emergency">
-                      <h3>🚨 Urgence immédiate</h3>
+                      <h3><FaExclamationTriangle size={24} color="#e74c3c" /> Urgence immédiate</h3>
                       <p>Pour les problèmes urgents nécessitant une intervention immédiate :</p>
                       <div className="emergency-contact">
                         <p className="emergency-phone">0770 12 34 56</p>
@@ -844,33 +839,36 @@ export default function Feedback() {
         {/* Section Statistiques */}
         <section className="stats-section">
           <div className="container">
-            <h2 className="section-title">Votre impact</h2>
+            <h2 className="section-title9">Votre impact</h2>
             <p className="section-subtitle">Grâce à vos retours, nous améliorons nos services chaque jour</p>
             
-            <div className="stats-grid">
+           <div className="stats-grid">
               <div className="stat-card">
-                <div className="stat-icon">📈</div>
+                <div className="stat-icon"><FaChartLine size={30} /></div>
                 <div className="stat-content">
                   <h3>85% des suggestions</h3>
                   <p>Sont étudiées et mises en œuvre</p>
                 </div>
               </div>
+
               <div className="stat-card">
-                <div className="stat-icon">⏱️</div>
+                <div className="stat-icon"><FaClock size={60} /></div>
                 <div className="stat-content">
                   <h3>48h max</h3>
                   <p>Délai moyen de traitement des doléances</p>
                 </div>
               </div>
+
               <div className="stat-card">
-                <div className="stat-icon">✅</div>
+                <div className="stat-icon"><FaCheck size={30} /></div>
                 <div className="stat-content">
                   <h3>95% résolus</h3>
                   <p>Des problèmes signalés sont résolus</p>
                 </div>
               </div>
+
               <div className="stat-card">
-                <div className="stat-icon">👥</div>
+                <div className="stat-icon"><FaUsers size={30} /></div>
                 <div className="stat-content">
                   <h3>50,000+</h3>
                   <p>Voyageurs participent chaque mois</p>

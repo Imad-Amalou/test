@@ -44,7 +44,6 @@
 
 /* Bouton */
 .travaux-btn {
-    display: inline-block;
     padding: 12px 25px;
     background: #95C11F;
     border-radius: 12px;
@@ -80,7 +79,6 @@
 /* ========================= */
 @media (max-width: 768px) {
     .travaux-section {
-        width: 95%;
         padding: 30px 20px;
         margin: 100px auto;
     }

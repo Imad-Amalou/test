@@ -9,8 +9,8 @@ const ASDSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={`ASD`}>
-      <div className="text ">
+    <section className="ASD">
+      <div className="text">
         <h2>{t("asd.title")}</h2>
         <p>{t("asd.description")}</p>
       </div>
@@ -18,32 +18,26 @@ const ASDSection = () => {
       <div className="care">
         <div className="deuxcare">
 
-          <div className="careuni" role="article">
+          <Link to="/Feedback" className="careuni" role="article">
             <img src={avis} alt={t("asd.avis.title")} width="50" />
             <h3>{t("asd.avis.title")}</h3>
-            <Link to="/Feedback" className="small-link">
-              {t("asd.avis.action")}
-            </Link>
-          </div>
+            <span className="card-action">{t("asd.avis.action")}</span>
+          </Link>
 
-          <div className="careuni" role="article">
+          <Link to="/Feedback" className="careuni" role="article">
             <img src={dol} alt={t("asd.sondage.title")} width="50" />
             <h3>{t("asd.sondage.title")}</h3>
-            <Link to="/Feedback" className="small-link">
-              {t("asd.sondage.action")}
-            </Link>
-          </div>
+            <span className="card-action">{t("asd.sondage.action")}</span>
+          </Link>
 
         </div>
 
         <div className="uncare">
-          <div className="careuni" role="article">
+          <Link to="/Feedback" className="careuni" role="article">
             <img src={sondage} alt={t("asd.doleance.title")} width="50" />
             <h3>{t("asd.doleance.title")}</h3>
-            <Link to="/Feedback" className="small-link">
-              {t("asd.doleance.action")}
-            </Link>
-          </div>
+            <span className="card-action">{t("asd.doleance.action")}</span>
+          </Link>
         </div>
       </div>
     </section>

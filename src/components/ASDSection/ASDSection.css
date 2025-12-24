@@ -51,7 +51,6 @@
     max-width: 260px;
 }
 
-/* COLONNE 1 CARTE */
 .uncare {
     display: flex;
     justify-content: center;
@@ -60,7 +59,6 @@
     max-width: 260px;
 }
 
-/* CARTE */
 .careuni {
     background-color: rgb(230, 230, 230);
     border-radius: 20px;
@@ -152,10 +150,6 @@
         max-width: 380px;
     }
 
-    .careuni {
-        width: 85%;
-    }
-
     .text h2 {
         font-size: 2rem;
         text-align: center;
@@ -166,3 +160,31 @@
         text-align: center;
     }
 }
+
+.careuni {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.careuni span.card-action {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #00592D;
+    position: relative;
+}
+
+.careuni span.card-action::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #6FA11F;
+    transition: width 0.35s ease;
+}
+
+.careuni:hover span.card-action::after {
+    width: 100%;
+}
+

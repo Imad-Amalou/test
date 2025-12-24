@@ -10,7 +10,9 @@
     "title": "About Sogral",
     "map": "Sogral Agencies",
     "actu": "News",
-    "ASD": "Feedback, Complaint, Survey"
+    "ASD": "Feedback, Complaint, Survey",
+    "Services" : "Services",
+    "mahatati" : "Mahatati"
   },
     "locaux": "Commercial premises",
     "locaux.consultation": "Consultation by agencies",
@@ -79,6 +81,49 @@
     "doleance": {
       "title": "Complaints",
       "action": "Submit a complaint"
+    }
+  },
+  "mahatati": {
+    "title": "Discover the Mahatati application",
+    "p1": "Mahatati allows you to easily view routes, book tickets, and make secure online payments.",
+    "p2": "Enjoy a simple and fast service to organize your trips with Sogral, directly from your smartphone.",
+    "button": "Access Mahatati",
+    "imageAlt": "Mahatati Application"
+  },
+   "social": {
+    "title": "Our social networks",
+    "facebook": {
+      "name": "Facebook",
+      "description": "Follow us on Facebook to stay updated with our news and daily updates."
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "description": "Find our professional publications and community on LinkedIn."
+    },
+    "instagram": {
+      "name": "Instagram",
+      "description": "Discover our photos, stories, and highlights directly on Instagram."
+    },
+    "twitter": {
+      "name": "Twitter",
+      "description": "Follow our quick updates and instant announcements on Twitter."
+    }
+  },
+  "contactCTA": {
+    "left": {
+      "title": {
+        "line1": "Didn’t find",
+        "line2": "an answer to your question?"
+      },
+      "imageAlt": "Contact illustration"
+    },
+    "right": {
+      "title": "Contact us",
+      "text": {
+        "line1": "A question? A problem?",
+        "line2": "Contact us through one of our channels:"
+      },
+      "button": "Contact us"
     }
   }
 

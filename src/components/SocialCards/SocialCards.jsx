@@ -1,40 +1,43 @@
 import React from "react";
-import "./SocialCards.css"; // Assurez-vous que le CSS est importé
-
-const socialLinks = [
-  {
-    name: "Facebook",
-    img: "https://cdn-icons-png.flaticon.com/512/733/733547.png",
-    description: "Suivez-nous sur Facebook pour rester informé de nos actualités et nouveautés au quotidien.",
-  },
-  {
-    name: "LinkedIn",
-    img: "https://cdn-icons-png.flaticon.com/512/3536/3536505.png",
-    description: "Retrouvez nos publications professionnelles et notre communauté sur LinkedIn.",
-  },
-  {
-    name: "Instagram",
-    img: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
-    description: "Découvrez nos photos, stories et moments forts directement sur Instagram.",
-  },
-  {
-    name: "Twitter",
-    img: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
-    description: "Suivez nos messages rapides et nos annonces instantanées sur Twitter.",
-  },
-];
+import "./SocialCards.css";
+import { useTranslation } from "react-i18next";
 
 const SocialCards = () => {
+  const { t } = useTranslation();
+
+  const socialLinks = [
+    {
+      key: "facebook",
+      img: "https://cdn-icons-png.flaticon.com/512/733/733547.png",
+    },
+    {
+      key: "linkedin",
+      img: "https://cdn-icons-png.flaticon.com/512/3536/3536505.png",
+    },
+    {
+      key: "instagram",
+      img: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+    },
+    {
+      key: "twitter",
+      img: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
+    },
+  ];
+
   return (
     <section>
-      <h2 className="section-title2">Nos réseaux sociaux</h2>
+      <h2 className="section-title2">{t("social.title")}</h2>
+
       <div className="social-cards">
-        {socialLinks.map((link, index) => (
-          <div className="card" key={index}>
-            <img src={link.img} alt={link.name} />
+        {socialLinks.map((link) => (
+          <div className="card" key={link.key}>
+            <img
+              src={link.img}
+              alt={t(`social.${link.key}.name`)}
+            />
             <div>
-              <h3>{link.name}</h3>
-              <p>{link.description}</p>
+              <h3>{t(`social.${link.key}.name`)}</h3>
+              <p>{t(`social.${link.key}.description`)}</p>
             </div>
           </div>
         ))}

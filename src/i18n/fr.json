@@ -12,7 +12,9 @@
     "title": "À propos de Sogral",
     "map": "Agences de Sogral",
     "actu": "Actualite",
-    "ASD": "Avis, Doleance, Sondage"
+    "ASD": "Avis, Doleance, Sondage",
+    "Services" : "Services",
+    "mahatati" : "Mahatati"
     },
     "locaux": "Locaux commerciaux",
     "locaux.consultation": "Consultation par agences",
@@ -90,6 +92,48 @@
     "doleance": {
       "title": "Doléances",
       "action": "Soumettre une doléance"
+    }
+  },
+  "mahatati": {
+    "title": "Découvrez l’application Mahatati",
+    "p1": "Mahatati vous permet de consulter facilement les trajets, de réserver vos billets et de payer en ligne en toute sécurité.",
+    "p2": "Profitez d’un service simple et rapide pour organiser vos déplacements avec Sogral, directement depuis votre smartphone.",
+    "button": "Accéder à Mahatati",
+    "imageAlt": "Application Mahatati"
+  },
+   "social": {
+    "title": "Nos réseaux sociaux",
+    "facebook": {
+      "name": "Facebook",
+      "description": "Suivez-nous sur Facebook pour rester informé de nos actualités et nouveautés au quotidien."
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "description": "Retrouvez nos publications professionnelles et notre communauté sur LinkedIn."
+    },
+    "instagram": {
+      "name": "Instagram",
+      "description": "Découvrez nos photos, stories et moments forts directement sur Instagram."
+    },
+    "twitter": {
+      "name": "Twitter",
+      "description": "Suivez nos messages rapides et nos annonces instantanées sur Twitter."
+    }
+  }, "contactCTA": {
+    "left": {
+      "title": {
+        "line1": "Vous n’avez pas trouvé",
+        "line2": "réponse à votre question ?"
+      },
+      "imageAlt": "Illustration contact"
+    },
+    "right": {
+      "title": "Contactez-nous",
+      "text": {
+        "line1": "Une question ? Un problème ?",
+        "line2": "Contactez-nous sur l'un de nos canaux :"
+      },
+      "button": "Nous contacter"
     }
   }
 }

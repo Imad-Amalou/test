@@ -754,16 +754,16 @@
   background: var(--gray-bg);
 }
 
-.section-title {
+.section-title9 {
   text-align: center;
   font-size: 2.5rem;
-  color: var(--primary-green);
+  color: var(--white);
   margin-bottom: 15px;
   position: relative;
   padding-bottom: 15px;
 }
 
-.section-title::after {
+.section-title9::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -838,7 +838,7 @@
     font-size: 2.2rem;
   }
   
-  .section-title {
+  .section-title9 {
     font-size: 2rem;
   }
   
