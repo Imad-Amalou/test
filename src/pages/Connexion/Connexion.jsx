@@ -190,7 +190,7 @@ const Connexion = () => {
       {/* Section principale */}
       <div className="auth-container">
         {/* Colonne gauche - Formulaires */}
-        <div className="auth-forms">
+        <div className="auth-forms3">
           
           <div className="auth-header">
             <img className='logo-connexion' src={logo} alt='logo sogral'></img>

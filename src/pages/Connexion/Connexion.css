@@ -45,7 +45,7 @@
 }
 
 /* Colonne gauche - Formulaires */
-.auth-forms {
+.auth-forms3 {
   flex: 1;
   padding: 3rem;
   display: flex;
@@ -543,7 +543,7 @@
     min-height: auto;
   }
   
-  .auth-forms {
+  .auth-forms3 {
     max-width: 100%;
     padding: 2.5rem;
   }
