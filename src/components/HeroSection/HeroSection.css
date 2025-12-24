@@ -119,11 +119,7 @@
 /* PETITS TÉLÉPHONES         */
 /* ========================= */
 @media (max-width: 480px) {
-    .hero-card {
-        width: 96%;
-        padding: 25px;
-    }
-
+ 
     .hero-card img {
         width: 160px;
     }
